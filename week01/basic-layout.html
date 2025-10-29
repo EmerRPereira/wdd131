@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerson Ronald Pereira WDD 131</title>
-    <link rel="stylesheet" href="styles/layout.css">
+    <title>Layout com Grid</title>
+    <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/myscripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1 contenteditable>Header</h1>
+        <h1>Header Content</h1>
     </header>
-    <div class="left-sidebar" contenteditable>Left Sidebar</div>
-    <main contenteditable>
 
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid-container">
+        <section class="main-content">
+            <h2>Main Content</h2>
+            <p>Conteúdo principal do site.</p>
+        </section>
+
+        <aside class="aside-content">
+            <h2>Aside Content</h2>
+            <p>Informações adicionais ou anúncios.</p>
+        </aside>
     </main>
-    <div class="right-sidebar" contenteditable>Right Sidebar</div>
-    <footer contenteditable>
-        Footer Content
+
+    <footer>
+        <p>Footer Content</p>
     </footer>
 </body>
 </html>

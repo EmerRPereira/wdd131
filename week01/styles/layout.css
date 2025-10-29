@@ -46,8 +46,8 @@ nav a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr; /* two columns */
-    gap: 60px;
-    padding: 20px;
+    gap: 5px;
+    padding: 5px;
 }
 
 /* Main Content */

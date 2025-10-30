@@ -89,6 +89,13 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+.country-line {
+  border: 0;
+  border-top: 1.5px solid #999; /* gray */
+  width: 40%; /* size proportional to the width of the block */
+  margin: 5px auto 10px 0; /* line aligned to the left */
+}
+
 /* Flag section */
 .brasil {
   display: flex;

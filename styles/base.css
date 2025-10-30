@@ -16,8 +16,8 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 header .highlight {
@@ -36,8 +36,8 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 nav a:hover {
@@ -64,14 +64,14 @@ nav a:hover {
   background-color: #295e90;
   color: white;
   padding: 0.6rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 6px;
   text-align: center;
 }
 
 .about p {
   font-size: 1.0rem;
-  line-height: 1.6;
+  line-height: 0.9;
   text-align: justify;
 }
 
@@ -85,7 +85,7 @@ nav a:hover {
 .about h3 {
   text-align: center;
   color: #4a2411;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   margin-top: 2rem;
 }
 
@@ -124,7 +124,7 @@ nav a:hover {
   background-color: #295e90;
   color: white;
   padding: 0.6rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 6px;
   text-align: center;
 }

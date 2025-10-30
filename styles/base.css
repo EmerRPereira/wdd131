@@ -16,8 +16,8 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 header .highlight {
@@ -36,8 +36,8 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 200;
+  font-size: 0.7rem;
+  font-weight: 150;
 }
 
 nav a:hover {

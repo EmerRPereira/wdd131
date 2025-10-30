@@ -49,7 +49,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 /* About Section */

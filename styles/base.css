@@ -92,12 +92,12 @@ nav a:hover {
 /* linha curta, cor clara, alinhada à esquerda (dentro do bloco) */
 .about hr.country-line {
   display: block;         /* garante comportamento de bloco */
-  width: 250px;           /* comprimento fixo — ajuste conforme necessidade */
-  max-width: 80%;         /* opcional — impede que fique maior em telas maiores */
+  width: 300px;           /* comprimento fixo — ajuste conforme necessidade */
+  max-width: 90%;         /* opcional — impede que fique maior em telas maiores */
   height: 0;              /* remove altura extra */
   border: 0;              /* remove bordas padrão */
   border-top: 2px solid #bdbdbd; /* cor e espessura da linha */
-  margin: 8px auto 14px auto;   /* espaço acima e abaixo, alinhada ao centro */
+  margin: 4px auto 7px auto;   /* espaço acima e abaixo, alinhada ao centro */
 }
 
 /* Flag section */

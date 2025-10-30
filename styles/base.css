@@ -97,7 +97,7 @@ nav a:hover {
   height: 0;              /* remove altura extra */
   border: 0;              /* remove bordas padrão */
   border-top: 2px solid #bdbdbd; /* cor e espessura da linha */
-  margin: 4px auto 7px auto;   /* espaço acima e abaixo, alinhada ao centro */
+  margin: 4px auto 4px auto;   /* espaço acima e abaixo, alinhada ao centro */
 }
 
 /* Flag section */

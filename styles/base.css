@@ -89,11 +89,15 @@ nav a:hover {
   margin-top: 2rem;
 }
 
-.country-line {
-  border: 0;
-  border-top: 1.5px solid #999; /* gray */
-  width: 20%; /* size proportional to the width of the block */
-  margin: 5px auto 10px 0; /* line aligned to the left */
+/* linha curta, cor clara, alinhada à esquerda (dentro do bloco) */
+.about hr.country-line {
+  display: block;         /* garante comportamento de bloco */
+  width: 160px;           /* comprimento fixo — ajuste conforme necessidade */
+  max-width: 40%;         /* opcional — impede que fique maior em telas maiores */
+  height: 0;              /* remove altura extra */
+  border: 0;              /* remove bordas padrão */
+  border-top: 2px solid #bdbdbd; /* cor e espessura da linha */
+  margin: 8px 0 14px 0;   /* espaço acima e abaixo, alinhada à esquerda */
 }
 
 /* Flag section */

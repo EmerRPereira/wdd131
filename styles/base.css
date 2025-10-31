@@ -6,12 +6,6 @@ body {
   margin: 0;
 }
 
-main {
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 900px;
-}
-
 /* Header */
 header {
   background-color: #133d63;
@@ -48,6 +42,12 @@ nav a {
 
 nav a:hover {
   color: #f9e84b;
+}
+/* Main */
+main {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 /* Main Layout */

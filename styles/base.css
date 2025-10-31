@@ -6,6 +6,12 @@ body {
   margin: 0;
 }
 
+header, main, footer {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 /* Header */
 header {
   background-color: #133d63;

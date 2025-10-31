@@ -171,7 +171,9 @@ footer {
   margin-top: 2rem;
 }
 
-footer .last-modified {
+
+
+footer .highlight {
   color: #f9e84b;
   font-size: 0.7rem;
 }

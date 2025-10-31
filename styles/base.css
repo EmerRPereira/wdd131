@@ -96,7 +96,7 @@ main {
 }
 
 /* linha curta, cor clara, alinhada à esquerda (dentro do bloco) */
-.about hr.country-line {
+.card hr.country-line {
   display: block;         /* garante comportamento de bloco */
   width: 250px;           /* comprimento fixo — ajuste conforme necessidade */
   max-width: 890%;         /* opcional — impede que fique maior em telas maiores */

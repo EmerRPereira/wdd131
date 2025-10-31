@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Dynamic Web Fundamentals - Emerson Ronald Pereira</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="description" content="Homepage for the WDD 131: 
+    Dynamic Web Fundamentals course by Emerson Ronald Pereira, featuring links, 
+    projects, and web development resources.">
     <meta name="author" content="Emerson Ronald Pereira">
     <script src="scripts/getdates.js" defer></script>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Emerson Ronald Pereira</span></h1>
+    <h1>WDD 131: Dynamic Web Fundamentals - Emerson Ronald Pereira</h1>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
     <p></p>
     <nav>
       <a href="#">LinkedIn</a>
@@ -24,9 +30,9 @@
 
   <main class="grid-container">
     <!-- About Me Section -->
-    <section class="about">
+    <section class="card">
       <h2>About Me</h2>
-      <img src="images/erp-2022.png" alt="Photo of Emerson Ronald Pereira" class="profile-pic">
+      <img src="images/erp2020.jpg" alt="Photo of Emerson Ronald Pereira" class="profile-pic">
 
       <p>
         My name is Emerson, I was born and live in Curitiba - Paraná - Brazil,
@@ -52,17 +58,19 @@
     </section>
 
     <!-- Web Dev Resources -->
-    <aside class="resources">
-      <h2>Web Dev Resources</h2>
-      <ul>
-        <li><a href="#">Dev.to Community</a></li>
-        <li><a href="#">Smashing Magazine</a></li>
-        <li><a href="#">CSS Tricks</a></li>
-        <li><a href="#">W3 Schools</a></li>
-        <li><a href="#">Udemy</a></li>
-        <li><a href="#">Image Placeholder</a></li>
-      </ul>
-    </aside>
+     <section class="card">
+        <aside class="resources">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#">Dev.to Community</a></li>
+                <li><a href="#">Smashing Magazine</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">W3 Schools</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Image Placeholder</a></li>
+            </ul>
+        </aside>
+    </section>
   </main>
 
   <footer>

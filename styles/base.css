@@ -131,14 +131,14 @@ main {
 }
 
 /* Resources */
-.resources {
+.card {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1rem;
 }
 
-.resources h2 {
+.card h2 {
   background-color: #295e90;
   color: white;
   padding: 0.6rem 1rem;
@@ -147,18 +147,18 @@ main {
   text-align: center;
 }
 
-.resources ul {
+.card ul {
   list-style-type: disc;
   padding-left: 1.3rem;
 }
 
-.resources a {
+.card a {
   color: #295e90;
   text-decoration: none;
   font-size: 1.3rem;
 }
 
-.resources a:hover {
+.card a:hover {
   text-decoration: underline;
 }
 

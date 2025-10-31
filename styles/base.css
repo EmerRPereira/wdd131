@@ -59,14 +59,14 @@ main {
 }
 
 /* About Section */
-.about {
+.card {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1.2rem;
 }
 
-.about h2 {
+.card h2 {
   background-color: #295e90;
   color: white;
   padding: 0.6rem 1rem;
@@ -75,7 +75,7 @@ main {
   text-align: center;
 }
 
-.about p {
+.card p {
   font-size: 1rem;
   line-height: 1.1;
   text-align: justify;
@@ -88,7 +88,7 @@ main {
   border-radius: 8px;
 }
 
-.about h3 {
+.card h3 {
   text-align: center;
   color: #4a2411;
   font-size: 1.2rem;
@@ -172,7 +172,7 @@ footer {
 
 footer .last-modified {
   color: #f9e84b;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 /* End of styles.css */

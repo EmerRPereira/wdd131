@@ -1,34 +1,32 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Temple Album - a responsive picture album example" />
-  <meta name="author" content="Emerson Ronald Pereira" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temple Album is a responsive, accessible gallery showcasing temples of Brazil, featuring adaptive layouts, navigation, and modern design for all devices.">
+  <meta name="author" content="Emerson Ronald Pereira">
   <title>Temple Album</title>
 
-  <!-- Google Fonts (opcional) -->
+  <!-- Performance Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
 
   <!-- Scripts -->
   <script defer src="scripts/temples.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header fixed -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <div class="brand">
-        <h1>Temple Album</h1>
-      </div>
-
-      <button id="hamburger" class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
-        ☰
-      </button>
+      <div class="brand"><h1>Temple Album</h1></div>
+      <button id="hamburger" class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">☰</button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <ul>
@@ -42,104 +40,34 @@
     </div>
   </header>
 
-  <!-- Main: note padding to avoid header/footer overlap -->
   <main id="main" class="site-main" role="main">
     <h2 class="page-title">Home</h2>
-
     <section class="gallery" aria-label="Temple images">
-      <!-- Example images (use your local images replacing the src paths) -->
-      <figure>
-        <img src="images/belem_brazil_temple_exterior.jpeg" alt="Belém Brazil Temple">
-        <figcaption>Belém, Brazil</figcaption>
-      </figure>
 
-      <figure>
-        <img src="images/brasilia_brazil_temple_exterior.jpeg" alt="Brasília Brazil Temple">
-        <figcaption>Brasília, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/campinas_brazil_temple_lds.jpeg" alt="Campinas Brazil Temple">
-        <figcaption>Campinas, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/curitiba_brazil_temple.jpeg" alt="Curitiba Brazil Temple">
-        <figcaption>Curitiba, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/Fortaleza-Templo.webp" alt="Fortaleza Brazil Temple">
-        <figcaption>Fortaleza, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/manaus_brazil_temple_lds.jpeg" alt="Manaus Brazil Temple">
-        <figcaption>Manaus, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/porto_alegre_brazil_temple_lds.webp" alt="Porto Alegre Brazil Temple">
-        <figcaption>Porto Alegre, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/recife_brazil_temple_lds.jpeg" alt="Recife Brazil Temple">
-        <figcaption>Recife, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/rio_de_janeiro_brazil_temple.jpeg" alt="Rio de Janeiro Brazil Temple">
-        <figcaption>Rio de Janeiro, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/salvador_brazil_temple_exteriors.jpeg" alt="Salvador Brazil Temple">
-        <figcaption>Salvador, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/sao-paulo-brazil_Templo.jpg" alt="São Paulo, Brazil Temple">
-        <figcaption>São Paulo, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_joao_pessoa_brazil_temple.jpg" alt="João Pessoa">
-        <figcaption>João Pessoa, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_londrina_brazil_temple.jpeg" alt="Londrina">
-        <figcaption>Londrina, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_maceio_brazil_temple.jpeg" alt="Maceió">
-        <figcaption>Maceió, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_natal_brazil_temple.jpeg" alt="Natal">
-        <figcaption>Natal, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_ribeirao_preto_brazil_temple.jpeg" alt="Ribeirão Preto">
-        <figcaption>Ribeirão Preto, Brazil</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/temple_rendering_teresina_brazil_temple.jpeg" alt="Teresina">
-        <figcaption>Teresina, Brazil</figcaption>
-      </figure>
+      <!-- EXAMPLE IMAGES (renomeie para evitar nomes longos ou letras maiúsculas) -->
+      <figure><img src="images/belem_temple.jpg" alt="Belém Brazil Temple"><figcaption>Belém, Brazil</figcaption></figure>
+      <figure><img src="images/brasilia_temple.jpg" alt="Brasília Brazil Temple"><figcaption>Brasília, Brazil</figcaption></figure>
+      <figure><img src="images/campinas_temple.jpg" alt="Campinas Brazil Temple"><figcaption>Campinas, Brazil</figcaption></figure>
+      <figure><img src="images/curitiba_temple.jpg" alt="Curitiba Brazil Temple"><figcaption>Curitiba, Brazil</figcaption></figure>
+      <figure><img src="images/fortaleza_temple.webp" alt="Fortaleza Brazil Temple"><figcaption>Fortaleza, Brazil</figcaption></figure>
+      <figure><img src="images/manaus_temple.jpg" alt="Manaus Brazil Temple"><figcaption>Manaus, Brazil</figcaption></figure>
+      <figure><img src="images/portoalegre_temple.webp" alt="Porto Alegre Brazil Temple"><figcaption>Porto Alegre, Brazil</figcaption></figure>
+      <figure><img src="images/recife_temple.jpg" alt="Recife Brazil Temple"><figcaption>Recife, Brazil</figcaption></figure>
+      <figure><img src="images/rio_temple.jpg" alt="Rio de Janeiro Brazil Temple"><figcaption>Rio de Janeiro, Brazil</figcaption></figure>
+      <figure><img src="images/salvador_temple.jpg" alt="Salvador Brazil Temple"><figcaption>Salvador, Brazil</figcaption></figure>
+      <figure><img src="images/saopaulo_temple.jpg" alt="São Paulo Brazil Temple"><figcaption>São Paulo, Brazil</figcaption></figure>
+      <figure><img src="images/joaopessoa_temple.jpg" alt="João Pessoa Temple"><figcaption>João Pessoa, Brazil</figcaption></figure>
+      <figure><img src="images/londrina_temple.jpg" alt="Londrina Temple"><figcaption>Londrina, Brazil</figcaption></figure>
+      <figure><img src="images/maceio_temple.jpg" alt="Maceió Temple"><figcaption>Maceió, Brazil</figcaption></figure>
+      <figure><img src="images/natal_temple.jpg" alt="Natal Temple"><figcaption>Natal, Brazil</figcaption></figure>
+      <figure><img src="images/ribeirao_temple.jpg" alt="Ribeirão Preto Temple"><figcaption>Ribeirão Preto, Brazil</figcaption></figure>
+      <figure><img src="images/teresina_temple.jpg" alt="Teresina Temple"><figcaption>Teresina, Brazil</figcaption></figure>
     </section>
   </main>
 
-  <!-- Footer fixed -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <p class="credits">© <span id="copyright-year"></span>
-        <span class="author">Emerson Ronald Pereira</span> • Brasil</p>
+      <p class="credits">© <span id="copyright-year"></span> <span class="author">Emerson Ronald Pereira</span> • Brasil</p>
       <p class="modified">Last Modification: <span id="last-modified"></span></p>
     </div>
   </footer>

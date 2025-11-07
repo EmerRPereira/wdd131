@@ -2,117 +2,145 @@
   --bg: #ffffff;
   --primary: #0b6b63;
   --accent: #0f3b36;
-  --muted: #666;
+  --muted: #666666;
   --max-width: 980px;
   --radius: 8px;
   --font-sans: "Nunito", system-ui, sans-serif;
   --font-serif: "Merriweather", Georgia, serif;
 }
 
+/* Reset */
 * { box-sizing: border-box; }
-
+html, body { height: 100%; margin: 0; }
 body {
-  margin: 0;
   font-family: var(--font-sans);
-  color: var(--accent);
   background: var(--bg);
+  color: var(--accent);
+  line-height: 1.45;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  position: static;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
 }
 
 /* Header */
 .site-header {
-  background: linear-gradient(180deg, var(--primary), #0b5a50);
+  background: linear-gradient(180deg, var(--primary), #0a5a50);
   color: #fff;
-  box-shadow: 0 2px 0 rgba(0,0,0,.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  position: relative;
 }
-
-.brand h1 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  white-space: nowrap; /* impede quebra */
+.brand h2 {
   margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 /* Hamburger */
 .hamburger {
+  font-size: 1.6rem;
   background: transparent;
   border: none;
-  color: white;
-  font-size: 1.8rem;
+  color: #fff;
   cursor: pointer;
+}
+.hamburger:focus {
+  outline: 3px solid rgba(255,255,255,0.2);
   border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
+/* Navigation dropdown */
 .primary-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(11,107,99,0.97);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  padding-top: 4rem;
-  z-index: 10;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  width: 200px;
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
+  z-index: 999;
 }
-
 .primary-nav.open {
-  transform: translateX(0);
+  transform: scaleY(1);
 }
-
 .primary-nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
-  text-align: center;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
 }
-
+.primary-nav li {
+  margin: 0;
+}
 .primary-nav a {
   display: block;
-  padding: 1rem;
-  color: white;
+  padding: 0.6rem 1rem;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
-
 .primary-nav a:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.1);
 }
 
-/* Main */
+/* Main content */
 .site-main {
   max-width: var(--max-width);
-  margin: 1.5rem auto;
+  margin: 1.2rem auto;
   padding: 0 1rem;
 }
+.site-main h1 {
+  text-align: center;
+  font-family: var(--font-serif);
+  margin-bottom: 1rem;
+}
 
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.2rem;
 }
-
 figure {
+  margin: 0;
   background: #fff;
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,.05);
-  padding: .6rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 0.6rem;
+  text-align: center;
 }
-
 figure img {
   width: 100%;
+  height: auto;
   border-radius: 6px;
+  object-fit: cover;
+  max-height: 220px;
+}
+figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 /* Footer */
@@ -120,6 +148,22 @@ figure img {
   background: var(--accent);
   color: #fff;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1rem 0;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.footer-inner p {
+  margin: 0.2rem 0;
+}
+
+/* Tablets: 2 columns */
+@media (min-width: 640px) and (max-width: 879px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  figure img {
+    max-height: 180px;
+  }
 }

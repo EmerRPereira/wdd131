@@ -1,0 +1,43 @@
+/* Base styles - mobile first */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fcff;
+}
+
+/* Shared styles for header, main, footer */
+header, main, footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #e6f2ff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+/* Layout for the main area */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+/* Section styling */
+section {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #003366;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  color: #003366;
+}

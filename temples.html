@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Temple Album - a responsive picture album example" />
+  <meta name="author" content="Emerson Ronald Pereira" />
+
+  <title>Temple Album</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <!-- Larger-screen overrides -->
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- Defer JavaScript -->
+  <script defer src="scripts/temples.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h2>Temple Album</h2>
+      </div>
+
+      <button id="hamburger" class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Old</a></li>
+          <li><a href="#" class="nav-link">New</a></li>
+          <li><a href="#" class="nav-link">Large</a></li>
+          <li><a href="#" class="nav-link">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <h1>Home</h1>
+
+    <section class="gallery" aria-label="Temple images">
+      <!-- 9 figure elements (replace image src & caption as needed) -->
+      <figure>
+        <img src="images/temple1.jpg" alt="San Diego California Temple exterior">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple2.jpg" alt="San Diego California Temple exterior close-up">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple3.jpg" alt="San Diego California Temple with palm trees">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple4.jpg" alt="Temple exterior at sunset">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple5.jpg" alt="Temple and garden">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple6.jpg" alt="Temple towers and sky">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple7.jpg" alt="Temple architecture detail">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple8.jpg" alt="Temple exterior with clouds">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple9.jpg" alt="Temple surrounded by palms">
+        <figcaption>San Diego, California</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="credits">© <span id="copyright-year"></span>
+        <span class="author">Rubia Magdalena Francesco</span> • Madagascar</p>
+      <p class="modified">Last Modification: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

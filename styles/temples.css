@@ -51,6 +51,7 @@ body {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   font-weight: 700;
+  white-space: nowrap; /* evita quebra em duas linhas */
 }
 
 /* Hamburger */
@@ -116,7 +117,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Gallery */
+/* Gallery base (mobile first → 1 column) */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -135,7 +136,7 @@ figure img {
   height: auto;
   border-radius: 6px;
   object-fit: cover;
-  max-height: 220px;
+  max-height: 240px;
 }
 figure figcaption {
   margin-top: 0.6rem;
@@ -158,12 +159,12 @@ figure figcaption {
   margin: 0.2rem 0;
 }
 
-/* Tablets: 2 columns */
+/* TABLET VIEW: 2 COLUMNS (640px - 879px) */
 @media (min-width: 640px) and (max-width: 879px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
   figure img {
-    max-height: 180px;
+    max-height: 200px;
   }
 }

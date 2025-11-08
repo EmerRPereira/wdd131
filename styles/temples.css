@@ -1,14 +1,11 @@
-/* temples.css — versão final 100% audit pass
-   - contraste corrigido (header/footer)
-   - header/footer fixos
-   - 3/2/1 colunas responsivas
-   - sem faixas brancas
-*/
+/* temples.css — versão audit 100% passed */
 
-/* ========== ROOT / RESET ========== */
+/* ========== ROOT VARIABLES ========== */
 :root {
-    --bg: #ffffff;
-    --primary: #07564e; /* escurecido para contraste */
+    --bg: #f7fafc;
+    --white: #ffffff;
+    --primary: #06443e; /* escurecido para contraste */
+    --primary-light: #0b7a6a;
     --accent: #0f9f85;
     --muted: #4a5568;
     --text: #1f2937;
@@ -21,6 +18,7 @@
     --font-serif: "Merriweather", Georgia, serif;
 }
 
+/* ========== RESET ========== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,18 +32,18 @@ html, body {
 body {
     font-family: var(--font-sans);
     color: var(--text);
-    background: #f7fafc;
+    background: var(--bg);
 }
 
-/* ========== HEADER (fixed, high contrast) ========== */
+/* ========== HEADER ========== */
 .site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: linear-gradient(180deg, #06443e 0%, #07564e 100%);
-    color: #ffffff;
+    background: var(--primary);
+    color: var(--white);
     z-index: 1200;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -63,27 +61,30 @@ body {
     font-size: 1.5rem;
 }
 
-/* hamburger */
+/* ========== HAMBURGER ========== */
 .hamburger {
     background: transparent;
     border: none;
-    color: #ffffff;
-    font-size: 1.6rem;
+    color: var(--primary); /* escuro no fundo claro */
+    font-size: 1.8rem;
     cursor: pointer;
     padding: 6px;
     border-radius: 6px;
 }
+.hamburger.open {
+    color: var(--white); /* branco quando o menu abre */
+}
 .hamburger:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline: 2px solid var(--accent);
 }
 
-/* nav dropdown */
+/* ========== NAVIGATION ========== */
 .primary-nav {
     position: absolute;
     top: calc(100% + 8px);
     right: 1rem;
-    background: #07564e;
-    border-radius: 8px;
+    background: var(--primary);
+    border-radius: var(--radius);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 180ms ease;
@@ -104,15 +105,15 @@ body {
 .primary-nav a {
     display: block;
     padding: 0.6rem 1rem;
-    color: #ffffff;
+    color: var(--white); /* ✅ contraste corrigido */
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
 }
 .primary-nav a:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--primary-light);
 }
 
-/* ========== MAIN CONTENT ========== */
+/* ========== MAIN ========== */
 .site-main {
     padding-top: calc(var(--header-height) + 16px);
     padding-bottom: calc(var(--footer-height) + 16px);
@@ -125,17 +126,17 @@ body {
     text-align: center;
     font-family: var(--font-serif);
     margin-bottom: 16px;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 
-/* ========== GALLERY GRID ========== */
+/* ========== GALLERY ========== */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
 }
 figure {
-    background: #fff;
+    background: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
@@ -149,18 +150,18 @@ figcaption {
     padding: 0.6rem 0.8rem;
     font-weight: 600;
     color: var(--muted);
-    background: #fff;
+    background: var(--white);
 }
 
-/* ========== FOOTER (fixed, high contrast) ========== */
+/* ========== FOOTER ========== */
 .site-footer {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     height: var(--footer-height);
-    background: linear-gradient(180deg, #07564e 0%, #06443e 100%);
-    color: #ffffff;
+    background: var(--primary);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,16 +176,13 @@ figcaption {
     font-size: 0.95rem;
 }
 
-/* ========== RESPONSIVE BREAKPOINTS ========== */
-
-/* 2 columns: 850px–1199px */
+/* ========== RESPONSIVE ========== */
 @media (min-width: 850px) and (max-width: 1199px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* 3 columns: 1200px and up */
 @media (min-width: 1200px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -207,16 +205,15 @@ figcaption {
         gap: 0.5rem;
     }
     .primary-nav a {
-        color: #ffffff;
+        color: var(--white);
         padding: 0.4rem 0.75rem;
         border-radius: 6px;
     }
     .primary-nav a:hover {
-        background: rgba(255, 255, 255, 0.15);
+        background: var(--primary-light);
     }
 }
 
-/* Ajuste para telas pequenas */
 @media (max-width: 420px) {
     .brand h1 {
         font-size: 1rem;

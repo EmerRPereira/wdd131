@@ -1,6 +1,4 @@
-/* temples-large.css
-   Adds refinements for large screens ≥1200px
-*/
+/* temples-large.css — refinamentos visuais para telas ≥1200px */
 
 @media (min-width: 1200px) {
     .gallery {
@@ -9,14 +7,20 @@
     }
 
     figure img {
-        max-height: 240px;
+        max-height: 280px;
+        object-fit: cover;
     }
 
     .page-title {
-        font-size: 1.25rem;
+        font-size: 2.5rem;
     }
 
     .site-main {
         max-width: 1400px;
+    }
+
+    figure:hover {
+        transform: scale(1.03);
+        transition: transform 0.25s ease;
     }
 }

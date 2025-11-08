@@ -3,20 +3,20 @@
 */
 
 @media (min-width: 1200px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
 
-  figure img {
-    max-height: 240px;
-  }
+    figure img {
+        max-height: 240px;
+    }
 
-  .page-title {
-    font-size: 1.25rem;
-  }
+    .page-title {
+        font-size: 1.25rem;
+    }
 
-  .site-main {
-    max-width: 1400px;
-  }
+    .site-main {
+        max-width: 1400px;
+    }
 }

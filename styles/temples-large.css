@@ -23,4 +23,8 @@
         transform: scale(1.03);
         transition: transform 0.25s ease;
     }
+
+    header.site-header {
+        background: linear-gradient(180deg, #06443e 0%, #064f45 100%);
+    }
 }

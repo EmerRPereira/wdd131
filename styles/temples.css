@@ -1,4 +1,4 @@
-/* temples.css — versão audit pass + visibilidade do menu corrigida */
+/* temples.css — versão final corrigida (contraste + menu visível) */
 
 /* ========== ROOT / RESET ========== */
 :root {
@@ -55,25 +55,27 @@ body {
 }
 .brand h1 {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); /* contraste melhorado */
 }
 
 /* HAMBURGER BUTTON */
 .hamburger {
     background: transparent;
-    border: none;
-    color: #ffffff; /* botão visível */
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
-    padding: 6px;
+    padding: 6px 10px;
     border-radius: 6px;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .hamburger:hover,
 .hamburger:focus {
     background: rgba(255, 255, 255, 0.15);
-    outline: 2px solid rgba(255, 255, 255, 0.3);
+    border-color: #ffffff;
+    outline: none;
 }
 
 /* NAV DROPDOWN */

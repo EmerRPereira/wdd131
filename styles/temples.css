@@ -12,10 +12,10 @@
     --accent: #0f9f85;
     --muted: #4a5568;
     --text: #1f2937;
-    --header-height: 64px;
+    --header-height: 96px;
     --footer-height: 56px;
     --max-width: 1400px;
-    --gap: 16px;
+    --gap: 32px;
     --radius: 8px;
     --font-sans: "Nunito", system-ui, Arial, sans-serif;
     --font-serif: "Merriweather", Georgia, serif;
@@ -60,7 +60,7 @@ body {
 }
 .brand h1 {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 /* hamburger */
@@ -106,7 +106,7 @@ body {
     padding: 0.6rem 1rem;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
 }
 .primary-nav a:hover {
     background: rgba(255, 255, 255, 0.12);
@@ -125,7 +125,7 @@ body {
     text-align: center;
     font-family: var(--font-serif);
     margin-bottom: 16px;
-    font-size: 1.1rem;
+    font-size: 3rem;
 }
 
 /* ========== GALLERY GRID ========== */

@@ -1,12 +1,21 @@
 /* temples.css — versão final corrigida (contraste + menu visível) */
 
 /* ========== ROOT / RESET ========== */
+/* temples.css — versão padronizada de cores (var + hex) */
+
+/* ========== ROOT / RESET ========== */
 :root {
     --bg: #ffffff;
+    --bg-alt: #f7fafc;
     --primary: #07564e;
+    --primary-dark: #06443e;
     --accent: #0f9f85;
     --muted: #4a5568;
     --text: #1f2937;
+    --white: #ffffff;
+    --black: #000000;
+    --shadow-light: #0206170f; /* rgba(2,6,23,0.06) convertido */
+    --shadow-dark: #00000026;  /* rgba(0,0,0,0.15) convertido */
     --header-height: 96px;
     --footer-height: 56px;
     --max-width: 1400px;
@@ -29,7 +38,7 @@ html, body {
 body {
     font-family: var(--font-sans);
     color: var(--text);
-    background: #f7fafc;
+    background: var(--bg-alt);
 }
 
 /* ========== HEADER ========== */
@@ -39,10 +48,10 @@ body {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: linear-gradient(180deg, #06443e 0%, #07564e 100%);
-    color: #ffffff;
+    background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: var(--white);
     z-index: 1200;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px var(--shadow-dark);
 }
 .header-inner {
     max-width: var(--max-width);
@@ -56,15 +65,15 @@ body {
 .brand h1 {
     font-family: var(--font-serif);
     font-size: 1.6rem;
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); /* contraste melhorado */
+    color: var(--white);
+    text-shadow: 0 1px 3px #00000059; /* rgba(0,0,0,0.35) convertido */
 }
 
 /* HAMBURGER BUTTON */
 .hamburger {
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    color: #ffffff;
+    border: 2px solid #ffffff99; /* rgba(255,255,255,0.6) */
+    color: var(--white);
     font-size: 1.8rem;
     cursor: pointer;
     padding: 6px 10px;
@@ -73,8 +82,8 @@ body {
 }
 .hamburger:hover,
 .hamburger:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #ffffff;
+    background: #ffffff26; /* rgba(255,255,255,0.15) */
+    border-color: var(--white);
     outline: none;
 }
 
@@ -83,7 +92,7 @@ body {
     position: absolute;
     top: calc(100% + 8px);
     right: 1rem;
-    background: #07564e;
+    background: var(--primary);
     border-radius: 8px;
     transform: scaleY(0);
     transform-origin: top;
@@ -103,12 +112,12 @@ body {
 .primary-nav a {
     display: block;
     padding: 0.6rem 1rem;
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
     font-weight: 700;
 }
 .primary-nav a:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: #ffffff1f; /* rgba(255,255,255,0.12) */
 }
 
 /* ========== MAIN ========== */
@@ -134,10 +143,10 @@ body {
     gap: var(--gap);
 }
 figure {
-    background: #fff;
+    background: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
+    box-shadow: 0 2px 8px var(--shadow-light);
 }
 figure img {
     width: 100%;
@@ -148,7 +157,7 @@ figcaption {
     padding: 0.6rem 0.8rem;
     font-weight: 600;
     color: var(--muted);
-    background: #fff;
+    background: var(--white);
 }
 
 /* ========== FOOTER ========== */
@@ -158,13 +167,13 @@ figcaption {
     right: 0;
     bottom: 0;
     height: var(--footer-height);
-    background: linear-gradient(180deg, #07564e 0%, #06443e 100%);
-    color: #ffffff;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1100;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 6px var(--shadow-dark);
 }
 .footer-inner {
     max-width: var(--max-width);
@@ -207,12 +216,12 @@ figcaption {
         gap: 0.5rem;
     }
     .primary-nav a {
-        color: #ffffff;
+        color: var(--white);
         padding: 0.4rem 0.75rem;
         border-radius: 6px;
     }
     .primary-nav a:hover {
-        background: rgba(255, 255, 255, 0.15);
+        background: #ffffff26;
     }
 }
 

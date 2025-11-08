@@ -1,7 +1,4 @@
-/* temples.css — versão final corrigida (contraste + menu visível) */
-
-/* ========== ROOT / RESET ========== */
-/* temples.css — versão padronizada de cores (var + hex) */
+/* temples.css — versão final validada (contraste + menu visível + espaçamento corrigido) */
 
 /* ========== ROOT / RESET ========== */
 :root {
@@ -14,8 +11,8 @@
     --text: #1f2937;
     --white: #ffffff;
     --black: #000000;
-    --shadow-light: #0206170f; /* rgba(2,6,23,0.06) convertido */
-    --shadow-dark: #00000026;  /* rgba(0,0,0,0.15) convertido */
+    --shadow-light: #0206170f;
+    --shadow-dark: #00000026;
     --header-height: 96px;
     --footer-height: 56px;
     --max-width: 1400px;
@@ -30,11 +27,13 @@
     margin: 0;
     padding: 0;
 }
+
 html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
+
 body {
     font-family: var(--font-sans);
     color: var(--text);
@@ -48,14 +47,12 @@ body {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background-color: #07564e; /* fundo sólido */
+    background-color: #07564e;
     background-image: linear-gradient(180deg, #06443e 0%, #07564e 100%);
     color: #ffffff;
     z-index: 1200;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
-
-
 
 .header-inner {
     max-width: var(--max-width);
@@ -66,17 +63,18 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .brand h1 {
     font-family: var(--font-serif);
     font-size: 1.6rem;
     color: var(--white);
-    text-shadow: 0 1px 3px #00000059; /* rgba(0,0,0,0.35) convertido */
+    text-shadow: 0 1px 3px #00000059;
 }
 
-/* HAMBURGER BUTTON */
+/* ========== HAMBURGER BUTTON ========== */
 .hamburger {
     background: transparent;
-    border: 2px solid #ffffff99; /* rgba(255,255,255,0.6) */
+    border: 2px solid rgba(255, 255, 255, 0.6);
     color: var(--white);
     font-size: 1.8rem;
     cursor: pointer;
@@ -84,15 +82,15 @@ body {
     border-radius: 6px;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
+
 .hamburger:hover,
 .hamburger:focus {
-    background: #ffffff26; /* rgba(255,255,255,0.15) */
+    background: rgba(255, 255, 255, 0.15);
     border-color: var(--white);
     outline: none;
 }
 
-/* NAV DROPDOWN */
-/* Ajuste do menu suspenso em telas pequenas */
+/* ========== NAV DROPDOWN ========== */
 .primary-nav {
     position: absolute;
     top: calc(100% + 8px);
@@ -103,23 +101,23 @@ body {
     transform-origin: top;
     transition: transform 180ms ease;
     width: 220px;
-    padding: 0.6rem 0.4rem; /* 🔹 Espaçamento interno restaurado */
+    padding: 0.6rem 0.4rem;
     z-index: 1250;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); /* leve profundidade */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .primary-nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem; /* 🔹 Espaço entre links */
-    padding: 0.3rem 0; /* 🔹 Respiro superior e inferior */
+    gap: 0.3rem;
+    padding: 0.3rem 0;
 }
 
 .primary-nav a {
     display: block;
-    padding: 0.6rem 1rem; /* 🔹 Respiro interno dentro do link */
-    color: #ffffff !important;
+    padding: 0.6rem 1rem;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     border-radius: 6px;
@@ -128,7 +126,7 @@ body {
 
 .primary-nav a:hover {
     background: rgba(255, 255, 255, 0.18);
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .primary-nav.open {
@@ -144,6 +142,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 .page-title {
     text-align: center;
     font-family: var(--font-serif);
@@ -157,17 +156,20 @@ body {
     grid-template-columns: 1fr;
     gap: var(--gap);
 }
+
 figure {
     background: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 2px 8px var(--shadow-light);
 }
+
 figure img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 figcaption {
     padding: 0.6rem 0.8rem;
     font-weight: 600;
@@ -190,6 +192,7 @@ figcaption {
     z-index: 1100;
     box-shadow: 0 -2px 6px var(--shadow-dark);
 }
+
 .footer-inner {
     max-width: var(--max-width);
     width: 100%;
@@ -230,13 +233,15 @@ figcaption {
         flex-direction: row;
         gap: 0.5rem;
     }
+
     .primary-nav a {
         color: var(--white);
         padding: 0.4rem 0.75rem;
         border-radius: 6px;
     }
+
     .primary-nav a:hover {
-        background: #ffffff26;
+        background: rgba(255, 255, 255, 0.15);
     }
 }
 

@@ -1,11 +1,9 @@
-/* temples.css — versão audit 100% passed */
+/* temples.css — versão audit pass + visibilidade do menu corrigida */
 
-/* ========== ROOT VARIABLES ========== */
+/* ========== ROOT / RESET ========== */
 :root {
-    --bg: #f7fafc;
-    --white: #ffffff;
-    --primary: #06443e; /* escurecido para contraste */
-    --primary-light: #0b7a6a;
+    --bg: #ffffff;
+    --primary: #07564e;
     --accent: #0f9f85;
     --muted: #4a5568;
     --text: #1f2937;
@@ -18,7 +16,6 @@
     --font-serif: "Merriweather", Georgia, serif;
 }
 
-/* ========== RESET ========== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,7 +29,7 @@ html, body {
 body {
     font-family: var(--font-sans);
     color: var(--text);
-    background: var(--bg);
+    background: #f7fafc;
 }
 
 /* ========== HEADER ========== */
@@ -42,8 +39,8 @@ body {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: var(--primary);
-    color: var(--white);
+    background: linear-gradient(180deg, #06443e 0%, #07564e 100%);
+    color: #ffffff;
     z-index: 1200;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -59,32 +56,33 @@ body {
 .brand h1 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
+    color: #ffffff;
 }
 
-/* ========== HAMBURGER ========== */
+/* HAMBURGER BUTTON */
 .hamburger {
     background: transparent;
     border: none;
-    color: var(--primary); /* escuro no fundo claro */
+    color: #ffffff; /* botão visível */
     font-size: 1.8rem;
     cursor: pointer;
     padding: 6px;
     border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
-.hamburger.open {
-    color: var(--white); /* branco quando o menu abre */
-}
+.hamburger:hover,
 .hamburger:focus {
-    outline: 2px solid var(--accent);
+    background: rgba(255, 255, 255, 0.15);
+    outline: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ========== NAVIGATION ========== */
+/* NAV DROPDOWN */
 .primary-nav {
     position: absolute;
     top: calc(100% + 8px);
     right: 1rem;
-    background: var(--primary);
-    border-radius: var(--radius);
+    background: #07564e;
+    border-radius: 8px;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 180ms ease;
@@ -97,20 +95,18 @@ body {
 }
 .primary-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
 }
 .primary-nav a {
     display: block;
     padding: 0.6rem 1rem;
-    color: var(--white); /* ✅ contraste corrigido */
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
 }
 .primary-nav a:hover {
-    background: var(--primary-light);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 /* ========== MAIN ========== */
@@ -129,14 +125,14 @@ body {
     font-size: 2.2rem;
 }
 
-/* ========== GALLERY ========== */
+/* ========== GALLERY GRID ========== */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
 }
 figure {
-    background: var(--white);
+    background: #fff;
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
@@ -150,7 +146,7 @@ figcaption {
     padding: 0.6rem 0.8rem;
     font-weight: 600;
     color: var(--muted);
-    background: var(--white);
+    background: #fff;
 }
 
 /* ========== FOOTER ========== */
@@ -160,8 +156,8 @@ figcaption {
     right: 0;
     bottom: 0;
     height: var(--footer-height);
-    background: var(--primary);
-    color: var(--white);
+    background: linear-gradient(180deg, #07564e 0%, #06443e 100%);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,13 +172,16 @@ figcaption {
     font-size: 0.95rem;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE GRID BREAKPOINTS ========== */
+
+/* 2 columns: 850–1199px */
 @media (min-width: 850px) and (max-width: 1199px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* 3 columns: ≥1200px */
 @media (min-width: 1200px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -200,20 +199,22 @@ figcaption {
         padding: 0;
         box-shadow: none;
     }
+
     .primary-nav ul {
         flex-direction: row;
         gap: 0.5rem;
     }
     .primary-nav a {
-        color: var(--white);
+        color: #ffffff;
         padding: 0.4rem 0.75rem;
         border-radius: 6px;
     }
     .primary-nav a:hover {
-        background: var(--primary-light);
+        background: rgba(255, 255, 255, 0.15);
     }
 }
 
+/* Ajuste para telas muito pequenas */
 @media (max-width: 420px) {
     .brand h1 {
         font-size: 1rem;

@@ -114,14 +114,14 @@ body {
     flex-direction: column;
 }
 .primary-nav a {
-    display: block;
-    padding: 0.6rem 1rem;
-    color: var(--white);
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: 700;
 }
+}
 .primary-nav a:hover {
-    background: #ffffff1f; /* rgba(255,255,255,0.12) */
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff !important;
 }
 
 /* ========== MAIN ========== */

@@ -92,36 +92,47 @@ body {
 }
 
 /* NAV DROPDOWN */
+/* Ajuste do menu suspenso em telas pequenas */
 .primary-nav {
     position: absolute;
     top: calc(100% + 8px);
     right: 1rem;
-    background: var(--primary);
+    background: #07564e;
     border-radius: 8px;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 180ms ease;
     width: 220px;
-    padding: 0.4rem 0;
+    padding: 0.6rem 0.4rem; /* 🔹 Espaçamento interno restaurado */
     z-index: 1250;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); /* leve profundidade */
 }
-.primary-nav.open {
-    transform: scaleY(1);
-}
+
 .primary-nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    gap: 0.3rem; /* 🔹 Espaço entre links */
+    padding: 0.3rem 0; /* 🔹 Respiro superior e inferior */
 }
+
 .primary-nav a {
+    display: block;
+    padding: 0.6rem 1rem; /* 🔹 Respiro interno dentro do link */
     color: #ffffff !important;
     text-decoration: none;
     font-weight: 700;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
-}
+
 .primary-nav a:hover {
     background: rgba(255, 255, 255, 0.18);
     color: #ffffff !important;
+}
+
+.primary-nav.open {
+    transform: scaleY(1);
 }
 
 /* ========== MAIN ========== */

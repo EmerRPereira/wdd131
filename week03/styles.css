@@ -1,0 +1,50 @@
+:root {
+  --bord: 1px solid #777;
+}
+
+/* Geral */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Estilo do container principal */
+.datatable {
+  display: inline-block;
+  border: var(--bord);
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Cada coluna da tabela */
+.col {
+  display: inline-block;
+  border-right: var(--bord);
+  border-bottom: var(--bord);
+  padding: 10px 20px;
+}
+
+/* Evita bordas duplas na última coluna */
+.col:last-child {
+  border-right: none;
+}
+
+/* Última linha com fundo cinza escuro */
+.row:last-child .col {
+  background-color: #ccc;
+}
+
+/* Links com pseudo-classes */
+a:link,
+a:visited {
+  color: navy;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:active {
+  color: navy;
+}

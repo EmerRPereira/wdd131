@@ -2,17 +2,31 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
+
+  <!-- RESPONSIVE -->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- META DESCRIPTION (50–160 caracteres) -->
+  <meta name="description"
+        content="Informações sobre Foz do Iguaçu, suas Cataratas, clima e dados gerais da cidade. Página bilíngue em Português e Inglês.">
+
+  <!-- META AUTHOR -->
+  <meta name="author" content="Emerson Ronald Pereira">
+
   <title>Foz do Iguaçu — Cataratas do Iguaçu</title>
 
   <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <h1 id="site-title" data-i18n="title">Foz do Iguaçu – Cataratas do Iguaçu</h1>
+      <h1 id="site-title" data-i18n="title">
+        Foz do Iguaçu – Cataratas do Iguaçu
+      </h1>
 
+      <!-- LANGUAGE SWITCH -->
       <nav class="lang-switch" aria-label="Language switch">
         <button id="btn-pt" class="lang-btn" aria-pressed="true" title="Português">BR</button>
         <button id="btn-en" class="lang-btn" aria-pressed="false" title="English">US</button>
@@ -21,18 +35,25 @@
   </header>
 
   <main>
-    <!-- HERO with responsive images (use your WebP files in images/) -->
+
+    <!-- HERO -->
     <picture class="hero">
-      <source srcset="images/fozdoiguaçu-cataratas.jpeg" media="(max-width:600px)" type="image/webp">
-      <source srcset="images/fozdoiguaçu-cataratas.jpeg" media="(min-width:601px)" type="image/webp">
-      <img id="hero-img" src="images/fozdoiguaçu-cataratas.jpeg" alt="" />
+      <source srcset="images/fozdoiguacu-cataratas.webp"
+              media="(max-width:600px)" type="image/webp">
+      <source srcset="images/fozdoiguacu-cataratas.webp"
+              media="(min-width:601px)" type="image/webp">
+      <img id="hero-img" src="images/fozdoiguacu-cataratas.webp"
+           alt="Cataratas do Iguaçu" />
     </picture>
 
-    <!-- Left: DATA / Right: WEATHER (absolute on desktop, stacked on mobile) -->
+    <!-- LEFT BOX — DATA -->
     <aside class="info-box data-box" id="dataBox" aria-labelledby="dataHeading">
-      <h2 id="dataHeading"><span class="title-band" data-i18n="dataHeading">Dados</span></h2>
+      <h2 id="dataHeading">
+        <span class="title-band" data-i18n="dataHeading">Dados</span>
+      </h2>
 
       <ul class="data-list">
+
         <li><span class="label" data-i18n="country_label">País:</span>
             <span class="value" data-i18n="country">Brasil</span></li>
 
@@ -65,20 +86,28 @@
 
         <li><span class="label" data-i18n="density_label">Densidade demográfica:</span>
             <span class="value" data-i18n="density">---</span></li>
+
       </ul>
     </aside>
 
+    <!-- RIGHT BOX — WEATHER -->
     <aside class="info-box weather-box" id="weatherBox" aria-labelledby="weatherHeading">
-      <h2 id="weatherHeading"><span class="title-band" data-i18n="weatherHeading">Clima</span></h2>
+      <h2 id="weatherHeading">
+        <span class="title-band" data-i18n="weatherHeading">Clima</span>
+      </h2>
 
-      <!-- Inline SVG (works on mobile) -->
+      <!-- INLINE SVG -->
       <div class="weather-graphic" aria-hidden="true">
-        <svg class="weather-svg" viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ícone do clima">
+        <svg class="weather-svg" viewBox="0 0 64 64"
+             width="72" height="72" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Ícone do clima">
           <title>Parcialmente nublado</title>
           <circle cx="44" cy="18" r="8" fill="#FFD54F"></circle>
           <g transform="translate(8,20)">
-            <ellipse cx="18" cy="14" rx="18" ry="12" fill="#f0f0f0"></ellipse>
-            <ellipse cx="6" cy="12" rx="8" ry="6" fill="#f0f0f0"></ellipse>
+            <ellipse cx="18" cy="14" rx="18" ry="12"
+                     fill="#f0f0f0"></ellipse>
+            <ellipse cx="6" cy="12" rx="8" ry="6"
+                     fill="#f0f0f0"></ellipse>
           </g>
         </svg>
       </div>
@@ -97,13 +126,23 @@
             <span class="value" id="windchill">--</span></li>
       </ul>
     </aside>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p><span id="copyright">&copy;</span> <span id="year"></span>
-       <span id="author">Emerson Ronald Pereira</span> • <span id="placeName" data-i18n="placeName">Foz do Iguaçu - Brasil</span>
+    <p>
+      <span id="copyright">&copy;</span>
+      <span id="year"></span>
+      <span id="author">Emerson Ronald Pereira</span> •
+      <span id="placeName" data-i18n="placeName">Foz do Iguaçu - Brasil</span>
     </p>
-    <p id="lastmodline"><span data-i18n="lastModPrefix">Última Modificação:</span> <span id="lastModified"></span></p>
+
+    <p id="lastmodline">
+      <span data-i18n="lastModPrefix">Última Modificação:</span>
+      <span id="lastModified"></span>
+    </p>
   </footer>
+
 </body>
 </html>

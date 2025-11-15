@@ -10,7 +10,7 @@
 const STRINGS = {
   pt: {
     langCode: 'pt-BR',
-    title: "Foz do Iguaçu – Cataratas do Iguaçu",
+    title: "Foz do Iguaçu * Cataratas do Iguaçu",
     dataHeading: "Dados",
     weatherHeading: "Clima ⛅",
     country_label: "País:",
@@ -48,7 +48,7 @@ const STRINGS = {
 
   en: {
     langCode: 'en',
-    title: "Foz do Iguaçu – Iguaçu Falls",
+    title: "Foz do Iguaçu * Iguaçu Falls",
     dataHeading: "Data",
     weatherHeading: "Weather ⛅",
     country_label: "Country:",

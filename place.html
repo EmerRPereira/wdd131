@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foz do Iguaçu — Cataratas do Iguaçu</title>
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 id="site-title" data-i18n="title">Foz do Iguaçu – Cataratas do Iguaçu</h1>
+
+      <nav class="lang-switch" aria-label="Language switch">
+        <button id="btn-pt" class="lang-btn" aria-pressed="true" title="Português">BR</button>
+        <button id="btn-en" class="lang-btn" aria-pressed="false" title="English">US</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO with responsive images (use your WebP files in images/) -->
+    <picture class="hero">
+      <source srcset="images/fozdoiguaçu-cataratas.jpeg" media="(max-width:600px)" type="image/webp">
+      <source srcset="images/fozdoiguaçu-cataratas.jpeg" media="(min-width:601px)" type="image/webp">
+      <img id="hero-img" src="images/fozdoiguaçu-cataratas.jpeg" alt="" />
+    </picture>
+
+    <!-- Left: DATA / Right: WEATHER (absolute on desktop, stacked on mobile) -->
+    <aside class="info-box data-box" id="dataBox" aria-labelledby="dataHeading">
+      <h2 id="dataHeading"><span class="title-band" data-i18n="dataHeading">Dados</span></h2>
+
+      <ul class="data-list">
+        <li><span class="label" data-i18n="country_label">País:</span>
+            <span class="value" data-i18n="country">Brasil</span></li>
+
+        <li><span class="label" data-i18n="state_label">Estado:</span>
+            <span class="value" data-i18n="state">Paraná</span></li>
+
+        <li><span class="label" data-i18n="population_label">População:</span>
+            <span class="value" data-i18n="population">258.532</span></li>
+
+        <li><span class="label" data-i18n="founded_label">Fundação:</span>
+            <span class="value" data-i18n="founded">10 de junho de 1914</span></li>
+
+        <li><span class="label" data-i18n="attraction_label">Ponto turístico:</span>
+            <span class="value" data-i18n="attraction">Cataratas do Iguaçu</span></li>
+
+        <li><span class="label" data-i18n="river_label">Rio:</span>
+            <span class="value" data-i18n="river">Rio Iguaçu</span></li>
+
+        <li><span class="label" data-i18n="borders_label">Fronteiras:</span>
+            <span class="value" data-i18n="borders">Paraguai e Argentina</span></li>
+
+        <li><span class="label" data-i18n="altitude_label">Altitude média:</span>
+            <span class="value" data-i18n="altitude">192 m</span></li>
+
+        <li><span class="label" data-i18n="climate_label">Clima:</span>
+            <span class="value" data-i18n="climate">Subtropical úmido</span></li>
+
+        <li><span class="label" data-i18n="hdi_label">IDH:</span>
+            <span class="value" data-i18n="hdi">---</span></li>
+
+        <li><span class="label" data-i18n="density_label">Densidade demográfica:</span>
+            <span class="value" data-i18n="density">---</span></li>
+      </ul>
+    </aside>
+
+    <aside class="info-box weather-box" id="weatherBox" aria-labelledby="weatherHeading">
+      <h2 id="weatherHeading"><span class="title-band" data-i18n="weatherHeading">Clima</span></h2>
+
+      <!-- Inline SVG (works on mobile) -->
+      <div class="weather-graphic" aria-hidden="true">
+        <svg class="weather-svg" viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ícone do clima">
+          <title>Parcialmente nublado</title>
+          <circle cx="44" cy="18" r="8" fill="#FFD54F"></circle>
+          <g transform="translate(8,20)">
+            <ellipse cx="18" cy="14" rx="18" ry="12" fill="#f0f0f0"></ellipse>
+            <ellipse cx="6" cy="12" rx="8" ry="6" fill="#f0f0f0"></ellipse>
+          </g>
+        </svg>
+      </div>
+
+      <ul class="weather-list">
+        <li><span class="label" data-i18n="temp_label">Temperatura:</span>
+            <span class="value"><span id="temp">--</span> <span class="unit">°C</span></span></li>
+
+        <li><span class="label" data-i18n="cond_label">Condição:</span>
+            <span class="value" id="condition">--</span></li>
+
+        <li><span class="label" data-i18n="wind_label">Vento:</span>
+            <span class="value"><span id="speed">--</span> km/h</span></li>
+
+        <li><span class="label" data-i18n="wc_label">Sensação térmica:</span>
+            <span class="value" id="windchill">--</span></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p><span id="copyright">&copy;</span> <span id="year"></span>
+       <span id="author">Emerson Ronald Pereira</span> • <span id="placeName" data-i18n="placeName">Foz do Iguaçu - Brasil</span>
+    </p>
+    <p id="lastmodline"><span data-i18n="lastModPrefix">Última Modificação:</span> <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

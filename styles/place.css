@@ -1,0 +1,200 @@
+:root{
+  --green: #006a3c;
+  --yellow: #ffdd00;
+  --blue: #002776;
+  --white: #ffffff;
+  --glass: rgba(255,255,255,0.88);
+  --text: #222;
+  --maxw: 800px; /* hero max width requested */
+}
+
+/* Basic reset */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background: #f6fff2;
+}
+
+/* Header */
+.site-header{
+  background: var(--green);
+  color: white;
+  padding: 1rem 0;
+}
+.header-inner{
+  max-width:var(--maxw);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 1rem;
+}
+.site-header h1{ margin:0; font-size:1.2rem; }
+
+/* Language buttons */
+.lang-switch { display:flex; gap:.4rem; align-items:center }
+.lang-btn{
+  background:transparent;
+  border:2px solid rgba(255,255,255,0.18);
+  color:white;
+  font-size:0.95rem;
+  padding:.3rem .5rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+.lang-btn[aria-pressed="true"]{
+  background:var(--yellow);
+  color:var(--green);
+  border-color:transparent;
+}
+
+/* Main container */
+main{ 
+  max-width:var(--maxw); 
+  margin:1rem auto; 
+  padding:0 1rem; 
+  position:relative; 
+  padding-bottom:1rem; /* remove espaçamento excessivo */
+}
+
+/* Hero image */
+.hero img, #hero-img {
+  width:100%;
+  max-width:800px; /* limit to 800px */
+  display:block;
+  margin:0 auto 1rem auto;
+  border-radius:8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* Info boxes - glass look */
+.info-box{
+  position:absolute;
+  background: var(--glass);
+  padding:0;
+  border-radius:10px;
+  box-shadow: 0 10px 30px rgba(10,10,10,0.25);
+  backdrop-filter: blur(4px);
+  font-size: 0.60rem; /* 60% as requested */
+}
+
+/* title band style */
+.title-band{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  background:var(--green);
+  color:var(--white);
+  padding:.45rem .8rem;
+  border-radius:10px 10px 0 0;
+  font-weight:700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  font-size:0.75rem;
+}
+
+/* ------------------------------- */
+/* DESKTOP POSITIONS               */
+/* ------------------------------- */
+
+/* Caixa Dados – subir mais */
+.data-box{
+  left:5%;
+  top:4%;     /* MAIS PRÓXIMA DO TOPO DA IMAGEM */
+  width:200px;
+}
+
+/* Caixa Clima – descer mais e reduzir a 60% */
+.weather-box{
+  right:5%;
+  top:54%;   /* FICA PERTO DO RODAPÉ, SOBRE A IMAGEM */
+  width:160px;
+  font-size:0.52rem;    /* reduz fonte */
+  padding-bottom:0.4rem;
+}
+
+/* Título Clima compacto */
+.weather-box .title-band{
+  padding:.30rem .5rem;
+  font-size:0.65rem;
+}
+
+/* Ícone do clima ao lado do título */
+.title-band img.weather-svg-title{
+  width:18px;
+  height:auto;
+}
+
+/* Listas reduzidas */
+.data-list, .weather-list{
+  list-style:none;
+  margin:0;
+  padding: .6rem .8rem .8rem .8rem;
+  max-height:10rem;
+  overflow:auto;
+  line-height: 1.5;
+}
+
+.weather-list{
+  max-height:7.5rem; /* mais baixa */
+}
+
+/* Footer */
+.site-footer{
+  max-width:var(--maxw);
+  margin:0.5rem auto 1rem;
+  padding:.9rem;
+  text-align:center;
+  color:#fff;
+  background:var(--green);
+  border-radius:8px;
+}
+.site-footer p{ margin:.18rem 0; font-size: 0.6rem; }
+
+/* ------------------------------- */
+/* MOBILE                          */
+/* ------------------------------- */
+
+@media (max-width:699px){
+
+  .info-box{
+    position:static;
+    width:100%;
+    margin-top:1rem;
+    box-shadow:none;
+    background:var(--white);
+    font-size:0.95rem;
+  }
+
+  .title-band{
+    display:flex;
+    align-items:center;
+    padding-left:1rem;
+    font-size:1rem;
+  }
+
+  .title-band img.weather-svg-title{
+    width:22px;
+  }
+
+  .weather-box h2::after{
+    content: " ⛅";
+    width:100%;
+    font-size:0.90rem;
+  }
+
+  .data-list, .weather-list{
+    max-height:none;
+    padding:1rem;
+  }
+}
+
+/* ------------------------------- */
+/* EXTRA DESKTOP WIDTH             */
+/* ------------------------------- */
+
+@media (min-width:1100px){
+  .data-box{ top:3%; }
+  .weather-box{ top:60%; }
+}

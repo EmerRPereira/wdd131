@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Templos no Brasil</title>
-    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- REQUIRED BY ASSIGNMENT -->
+    <title>Temple Album - Temples in Brazil</title>
+
+    <!-- SEO REQUIRED -->
+    <meta name="description" content="Temple Album - A gallery of temples located in Brazil, featuring images, details and filtering options for an improved viewing experience.">
+    <meta name="author" content="Emerson Ronald Pereira">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
 </head>
 
 <body>
 
 <header>
-    <h1 id="page-title">Templos do Brasil</h1>
+    <h1>Temple Album</h1>
 
+    <!-- NAV **DENTRO DO HEADER** COMO EXIGIDO -->
+    <nav>
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="old">Old</button>
+        <button class="filter-btn" data-filter="new">New</button>
+        <button class="filter-btn" data-filter="large">Large</button>
+        <button class="filter-btn" data-filter="small">Small</button>
+    </nav>
+
+    <!-- LANGUAGE + THEME SELECTORS -->
     <div class="controls">
-        <button id="theme-toggle">🌙 Dark</button>
-
         <select id="language-select">
-            <option value="pt-BR">🇧🇷 Português</option>
-            <option value="en-US">🇺🇸 English</option>
+            <option value="en">English (US)</option>
+            <option value="pt">Português (BR)</option>
         </select>
+
+        <button id="theme-toggle">Dark / Light</button>
     </div>
 </header>
 
-<nav>
-    <button data-filter="all" class="filter-btn">Todos</button>
-    <button data-filter="old" class="filter-btn">Antigos</button>
-    <button data-filter="new" class="filter-btn">Novos</button>
-    <button data-filter="small" class="filter-btn">Pequenos</button>
-    <button data-filter="large" class="filter-btn">Grandes</button>
-</nav>
-
 <main>
-    <div id="temple-cards" class="grid"></div>
+    <section class="grid" id="temple-cards"></section>
 </main>
 
 <footer>
-    <p>© <span id="currentyear"></span> Emerson Ronald Pereira</p>
-    <p class="footer-text">
-        <span id="footer-label">Última atualização:</span>
-        <span id="lastmodified"></span>
-    </p>
+    <p>&copy; <span id="currentyear"></span> Temple Album</p>
+    <p class="footer-text">Last Updated: <span id="lastmodified"></span></p>
 </footer>
 
+<!-- JAVASCRIPT -->
 <script src="scripts/filtered-temples.js"></script>
+
 </body>
 </html>

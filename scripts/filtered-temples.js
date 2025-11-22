@@ -104,38 +104,43 @@ const temples = [
 ];
 
 /* =========================================================
-   ELEMENTOS
+   ELEMENTOS DO HTML
    ========================================================= */
-const container = document.querySelector("#temple-cards");
+const container = document.querySelector("#temple-container");
 const languageSelect = document.querySelector("#language-select");
 const themeToggle = document.querySelector("#theme-toggle");
 
-/* IDIOMA */
-let currentLang = "pt-BR";
+/* =========================================================
+   TRADUÇÃO
+   ========================================================= */
+let currentLang = "en-US";
 
 const translations = {
   "pt-BR": {
     title: "Templos do Brasil",
     lastUpdate: "Última atualização:",
-    labels: { location: "Local", dedicated: "Dedicação", area: "Área" },
-    filters: ["Todos", "Antigos", "Novos", "Pequenos", "Grandes"]
+    labels: { location: "Local", dedicated: "Dedicado", area: "Área (m²)" },
+    filters: ["Todos", "Antigos", "Novos", "Grandes", "Pequenos"]
   },
   "en-US": {
     title: "Temples in Brazil",
     lastUpdate: "Last updated:",
-    labels: { location: "Location", dedicated: "Dedicated", area: "Area" },
-    filters: ["All", "Old", "New", "Small", "Large"]
+    labels: { location: "Location", dedicated: "Dedicated", area: "Area (sq ft)" },
+    filters: ["All", "Old", "New", "Large", "Small"]
   }
 };
 
+/* =========================================================
+   FUNÇÃO DE IDIOMA
+   ========================================================= */
 function updateLanguage() {
   const t = translations[currentLang];
 
   document.getElementById("page-title").textContent = t.title;
   document.getElementById("footer-label").textContent = t.lastUpdate;
 
-  document.querySelectorAll(".filter-btn").forEach((btn, i) => {
-    btn.textContent = t.filters[i];
+  document.querySelectorAll(".filter-btn").forEach((btn, index) => {
+    btn.textContent = t.filters[index];
   });
 
   displayTemples(temples);
@@ -147,7 +152,7 @@ languageSelect.addEventListener("change", () => {
 });
 
 /* =========================================================
-   DISPLAY DOS CARDS
+   EXIBE OS CARDS
    ========================================================= */
 function displayTemples(list) {
   container.innerHTML = "";
@@ -159,6 +164,14 @@ function displayTemples(list) {
     const location =
       currentLang === "pt-BR" ? temple.locationBR : temple.locationUS;
 
+    // 🔥 Conversão m² → square feet quando inglês
+    let area = `${temple.area} m²`;
+
+    if (currentLang === "en-US") {
+      const sqFeet = (temple.area * 10.7639).toFixed(0);
+      area = `${sqFeet} sq ft`;
+    }
+
     const card = document.createElement("section");
     card.classList.add("card");
 
@@ -166,7 +179,7 @@ function displayTemples(list) {
       <h2>${title}</h2>
       <p><strong>${t.labels.location}:</strong> ${location}</p>
       <p><strong>${t.labels.dedicated}:</strong> ${temple.dedicated}</p>
-      <p><strong>${t.labels.area}:</strong> ${temple.area} m²</p>
+      <p><strong>${t.labels.area}:</strong> ${area}</p>
 
       <img data-src="${temple.imageUrl}" alt="${title}">
     `;
@@ -194,7 +207,7 @@ function lazyLoadImages() {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.1 }
   );
 
   cards.forEach((c) => observer.observe(c));
@@ -205,24 +218,24 @@ function lazyLoadImages() {
    ========================================================= */
 document.querySelectorAll(".filter-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
+    const flt = btn.dataset.filter;
 
     let filtered = temples;
 
-    if (filter === "old")
+    if (flt === "old")
       filtered = temples.filter(
         (t) => new Date(t.dedicated).getFullYear() < 2000
       );
 
-    if (filter === "new")
+    if (flt === "new")
       filtered = temples.filter(
         (t) => new Date(t.dedicated).getFullYear() >= 2000
       );
 
-    if (filter === "small")
+    if (flt === "small")
       filtered = temples.filter((t) => t.area > 0 && t.area < 2500);
 
-    if (filter === "large")
+    if (flt === "large")
       filtered = temples.filter((t) => t.area >= 3000);
 
     displayTemples(filtered);
@@ -230,14 +243,10 @@ document.querySelectorAll(".filter-btn").forEach((btn) => {
 });
 
 /* =========================================================
-   TEMA (DARK/LIGHT)
+   TEMA DARK/LIGHT
    ========================================================= */
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-
-  themeToggle.textContent = document.body.classList.contains("dark")
-    ? "☀️ Light"
-    : "🌙 Dark";
 });
 
 /* =========================================================
@@ -245,11 +254,12 @@ themeToggle.addEventListener("click", () => {
    ========================================================= */
 document.getElementById("currentyear").textContent =
   new Date().getFullYear();
+
 document.getElementById("lastmodified").textContent =
   document.lastModified;
 
 /* =========================================================
    INICIALIZAÇÃO
    ========================================================= */
-displayTemples(temples);
 updateLanguage();
+displayTemples(temples);

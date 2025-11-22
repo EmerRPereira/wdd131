@@ -11,9 +11,9 @@
     --accent-soft: #8d6ad6;
 
     /* Texto reduzido (~60%) */
-    --text-small: 0.78rem;
-    --text-normal: 0.9rem;
-    --text-title: 1.2rem;
+    --text-small: 0.75rem;
+    --text-normal: 0.85rem;
+    --text-title: 1.1rem;
 }
 
 body.dark {
@@ -53,7 +53,7 @@ header h1 {
 }
 
 /* ============================================================
-   NAVIGATION (CORRIGIDO — usa <a>, não .filter-btn)
+   NAVIGATION
    ============================================================ */
 nav {
     display: flex;
@@ -109,26 +109,24 @@ select:hover {
 }
 
 /* ============================================================
-   GRID — AGORA FUNCIONA 3 / 2 / 1 SEM FALHAR
+   GRID — 1 → 2 → 3 colunas SEM SCROLL HORIZONTAL
    ============================================================ */
 .grid {
     display: grid;
-    gap: 1.6rem;
-    padding: 1.8rem;
-
-    /* MOBILE-FIRST (1 coluna) */
-    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 1.5rem;
+    grid-template-columns: 1fr;  /* padrão */
 }
 
 /* 2 colunas */
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* 3 colunas GARANTIDAS EM TELA GRANDE */
-@media (min-width: 1200px) {
+/* 3 colunas — GARANTIDO E SEM ESTOURO */
+@media (min-width: 1000px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -141,9 +139,9 @@ select:hover {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 1.2rem;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 5px 14px var(--card-shadow);
+    box-shadow: 0 4px 12px var(--card-shadow);
 
     opacity: 0;
     transform: translateY(40px);
@@ -158,10 +156,11 @@ select:hover {
 .card h2 {
     margin: 0 0 0.3rem;
     font-size: var(--text-title);
+    font-weight: 700;
 }
 
 .card p {
-    margin: 0.15rem 0;
+    margin: 0.16rem 0;
     font-size: var(--text-normal);
 }
 
@@ -173,18 +172,21 @@ select:hover {
 }
 
 /* ============================================================
-   IMAGENS
+   IMAGENS — REDUZIDAS PARA CABER 3 CARDS
    ============================================================ */
 .card img {
     width: 100%;
-    margin-top: 0.8rem;
+    margin-top: 0.7rem;
     border-radius: 10px;
     border: 1px solid var(--card-border);
     object-fit: cover;
-    min-height: 180px;
-    max-height: 240px;
+    
+    /* 🔥 Dimensões otimizadas para 3 colunas */
+    min-height: 120px;
+    max-height: 160px;
+
     background: #e8e8e8;
-    box-shadow: 0 8px 16px var(--card-shadow);
+    box-shadow: 0 6px 14px var(--card-shadow);
 }
 
 /* ============================================================

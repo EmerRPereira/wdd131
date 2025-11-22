@@ -197,3 +197,6 @@ footer {
     font-size: var(--text-small);
 }
 
+.footer-text {
+    font-size: 0.5rem;
+}

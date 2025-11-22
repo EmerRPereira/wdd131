@@ -7,100 +7,100 @@ const temples = [
     nameUS: "Belém Brazil Temple",
     locationBR: "Belém, Pará, Brasil",
     locationUS: "Belém, Pará, Brazil",
-    dedicated: "2022-11-20",
+    dedicated: "2022-November-20",
     area: 2385,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/588d3a27e2b911ec94adeeeeac1e0a0694f432a0/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/588d3a27e2b911ec94adeeeeac1e0a0694f432a0/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Brasília",
     nameUS: "Brasília Brazil Temple",
     locationBR: "Brasília, Brasil",
     locationUS: "Brasília, Brazil",
-    dedicated: "2023-09-17",
+    dedicated: "2023-September-17",
     area: 2300,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/95f3f3abdd4811ed920ceeeeac1e15db91037802/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/95f3f3abdd4811ed920ceeeeac1e15db91037802/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Campinas",
     nameUS: "Campinas Brazil Temple",
     locationBR: "Campinas, São Paulo, Brasil",
     locationUS: "Campinas, São Paulo, Brazil",
-    dedicated: "2002-05-17",
+    dedicated: "2002-May-17",
     area: 2150,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/c9a81a6f86750d7d9ade3499d3df52e2f7f726a7/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/c9a81a6f86750d7d9ade3499d3df52e2f7f726a7/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Curitiba",
     nameUS: "Curitiba Brazil Temple",
     locationBR: "Curitiba, Paraná, Brasil",
     locationUS: "Curitiba, Paraná, Brazil",
-    dedicated: "2008-06-01",
+    dedicated: "2008-June-01",
     area: 2587,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/ea7e0f39c8e26d163a4dfedfcb1ce5c41d650b5b/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/ea7e0f39c8e26d163a4dfedfcb1ce5c41d650b5b/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Fortaleza",
     nameUS: "Fortaleza Brazil Temple",
     locationBR: "Fortaleza, Ceará, Brasil",
     locationUS: "Fortaleza, Ceará, Brazil",
-    dedicated: "2019-06-02",
+    dedicated: "2019-June-02",
     area: 3300,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/e2a28dbb2b14f5f71d79b359cf9f7b88dc480144/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/e2a28dbb2b14f5f71d79b359cf9f7b88dc480144/full/640%2C/0/default"
   },
-  {
-    nameBR: "Templo de Londrina",
-    nameUS: "Londrina Brazil Temple",
-    locationBR: "Londrina, Paraná, Brasil",
-    locationUS: "Londrina, Paraná, Brazil",
-    dedicated: "TBD",
-    area: 0,
-    imageUrl: "images/londrina-temple.jpeg"
-  },
-  {
+    {
     nameBR: "Templo de Manaus",
     nameUS: "Manaus Brazil Temple",
     locationBR: "Manaus, Amazonas, Brasil",
     locationUS: "Manaus, Amazonas, Brazil",
-    dedicated: "2012-06-10",
+    dedicated: "2012-June-10",
     area: 2976,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/f758727dc0cd20dc24845be6e5810f81e400d603/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/f758727dc0cd20dc24845be6e5810f81e400d603/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Porto Alegre",
     nameUS: "Porto Alegre Brazil Temple",
     locationBR: "Porto Alegre, Rio Grande do Sul, Brasil",
     locationUS: "Porto Alegre, Rio Grande do Sul, Brazil",
-    dedicated: "2000-12-17",
+    dedicated: "2000-December-17",
     area: 2137,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/8b7f7031cc837345a3638255f73ad8df9b9ed693/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/8b7f7031cc837345a3638255f73ad8df9b9ed693/full/640%2C/0/default"
   },
   {
     nameBR: "Templo de Recife",
     nameUS: "Recife Brazil Temple",
     locationBR: "Recife, Pernambuco, Brasil",
     locationUS: "Recife, Pernambuco, Brazil",
-    dedicated: "2000-12-15",
+    dedicated: "2000-December-15",
     area: 3460,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/74d57cefebf31773df61b0b882067ee236de5279/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/74d57cefebf31773df61b0b882067ee236de5279/full/640%2C/0/default"
   },
   {
     nameBR: "Templo do Rio de Janeiro",
     nameUS: "Rio de Janeiro Brazil Temple",
     locationBR: "Rio de Janeiro, Brasil",
     locationUS: "Rio de Janeiro, Brazil",
-    dedicated: "2022-05-08",
+    dedicated: "2022-May-08",
     area: 2784,
     imageUrl:
-      "https://www.churchofjesuschrist.org/imgs/001db7326e638032470a02813c9e47191ef74b0e/full/640%2C/0/default"
+        "https://www.churchofjesuschrist.org/imgs/001db7326e638032470a02813c9e47191ef74b0e/full/640%2C/0/default"
+  },
+  {
+    nameBR: "Templo de São Paulo",
+    nameUS: "São Paulo Brazil Temple",
+    locationBR: "São Paulo, Brasil",
+    locationUS: "São Paulo, Brazil", dedicated: "1978-October-30",
+    area: 2137, imageUrl: 
+        "https://www.churchofjesuschrist.org/imgs/940f3e201364433a3d5d3dc14b0cacee38d41d1d/full/640%2C/0/default"
   }
+
 ];
 
 /* =========================================================

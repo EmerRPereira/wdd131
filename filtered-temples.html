@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- REQUIRED BY ASSIGNMENT -->
+    <!-- REQUIRED -->
     <title>Temple Album - Temples in Brazil</title>
 
-    <!-- SEO REQUIRED -->
-    <meta name="description" content="Temple Album - A gallery of temples located in Brazil, featuring images, details and filtering options for an improved viewing experience.">
+    <!-- REQUIRED -->
+    <meta name="description" content="Temple Album - A gallery of temples in Brazil with images, filtering options, and structured information for educational purposes.">
     <meta name="author" content="Emerson Ronald Pereira">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/filtered-temples.css">
 </head>
 
@@ -20,16 +19,15 @@
 <header>
     <h1>Temple Album</h1>
 
-    <!-- NAV **DENTRO DO HEADER** COMO EXIGIDO -->
+    <!-- REQUIRED: nav must be inside header AND must contain links <a> -->
     <nav>
-        <button class="filter-btn" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="old">Old</button>
-        <button class="filter-btn" data-filter="new">New</button>
-        <button class="filter-btn" data-filter="large">Large</button>
-        <button class="filter-btn" data-filter="small">Small</button>
+        <a href="#">Home</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
     </nav>
 
-    <!-- LANGUAGE + THEME SELECTORS -->
     <div class="controls">
         <select id="language-select">
             <option value="en">English (US)</option>
@@ -49,7 +47,6 @@
     <p class="footer-text">Last Updated: <span id="lastmodified"></span></p>
 </footer>
 
-<!-- JAVASCRIPT -->
 <script src="scripts/filtered-temples.js"></script>
 
 </body>

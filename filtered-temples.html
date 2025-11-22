@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Templos no Brasil</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
+
+<body>
+
+<header>
+    <h1 id="page-title">Templos do Brasil</h1>
+
+    <div class="controls">
+        <button id="theme-toggle">🌙 Dark</button>
+
+        <select id="language-select">
+            <option value="pt-BR">🇧🇷 Português</option>
+            <option value="en-US">🇺🇸 English</option>
+        </select>
+    </div>
+</header>
+
+<nav>
+    <button data-filter="all" class="filter-btn">Todos</button>
+    <button data-filter="old" class="filter-btn">Antigos</button>
+    <button data-filter="new" class="filter-btn">Novos</button>
+    <button data-filter="small" class="filter-btn">Pequenos</button>
+    <button data-filter="large" class="filter-btn">Grandes</button>
+</nav>
+
+<main>
+    <div id="temple-cards" class="grid"></div>
+</main>
+
+<footer>
+    <p>© <span id="currentyear"></span> Emerson Ronald Pereira</p>
+    <p class="footer-text">
+        <span id="footer-label">Última atualização:</span>
+        <span id="lastmodified"></span>
+    </p>
+</footer>
+
+<script src="scripts/filtered-temples.js"></script>
+</body>
+</html>

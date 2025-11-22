@@ -1,0 +1,215 @@
+/* ============================================================
+   TEMAS (LIGHT / DARK)
+   ============================================================ */
+:root {
+    --bg: #fafafa;
+    --fg: #222;
+    --card-bg: #ffffff;
+    --card-border: #d9d9d9;
+    --card-shadow: rgba(0, 0, 0, 0.12);
+    --accent: #6338b0;
+    --accent-soft: #8d6ad6;
+
+    /* Ajustes de tamanho reduzido (~60%) */
+    --text-small: 0.78rem;
+    --text-normal: 0.9rem;
+    --text-title: 1.2rem;
+}
+
+body.dark {
+    --bg: #1a1a1a;
+    --fg: #f1f1f1;
+    --card-bg: #262626;
+    --card-border: #444;
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --accent: #b79bff;
+    --accent-soft: #d0c0ff;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+body {
+    background: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+    padding: 2rem 1rem 0.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* ============================================================
+   CONTROLES
+   ============================================================ */
+.controls {
+    margin-top: 1.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+button, select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--fg);
+    cursor: pointer;
+    font-size: var(--text-small);
+    font-weight: 500;
+    transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+select:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: #fff;
+}
+
+/* ============================================================
+   NAV (BOTÕES)
+   ============================================================ */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.filter-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-small);
+    transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   GRID COM 3 / 2 / 1 COLUNAS
+   ============================================================ */
+.grid {
+    display: grid;
+    gap: 1.6rem;
+    padding: 1.8rem;
+}
+
+/* 3 colunas GARANTIDAS */
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* 2 colunas */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 1 coluna */
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 5px 14px var(--card-shadow);
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Títulos reduzidos (~60%) */
+.card h2 {
+    margin: 0 0 .25rem;
+    font-size: var(--text-title);
+    line-height: 1.2;
+}
+
+/* Textos menores */
+.card p {
+    margin: 0.2rem 0;
+    font-size: var(--text-normal);
+}
+
+.card p strong {
+    font-size: var(--text-small);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   IMAGENS
+   ============================================================ */
+.card img {
+    width: 100%;
+    margin-top: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    object-fit: cover;
+
+    /* Altura levemente reduzida também */
+    min-height: 180px;
+    max-height: 240px;
+
+    background: #e8e8e8;
+    box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    text-align: center;
+    padding: 1.8rem 1rem;
+    opacity: .65;
+    font-size: var(--text-small);
+}
+
+.footer-text {
+    font-size: calc(var(--text-small) * 0.9);
+}

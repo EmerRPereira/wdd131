@@ -1,0 +1,80 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Avaliação de Produto</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+
+            <!-- Nome do Produto -->
+            <label for="productName">Nome do Produto</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Selecione um produto...</option>
+            </select>
+
+
+            <!-- Avaliação Geral -->
+            <fieldset class="rating">
+                <legend>Avaliação Geral</legend>
+                <label><input type="radio" name="rating" value="1" required />☆</label>
+                <label><input type="radio" name="rating" value="2" />☆☆</label>
+                <label><input type="radio" name="rating" value="3" />☆☆☆</label>
+                <label><input type="radio" name="rating" value="4" />☆☆☆☆</label>
+                <label><input type="radio" name="rating" value="5" />☆☆☆☆☆</label>
+            </fieldset>
+
+
+            <!-- Data de instalação -->
+            <label for="installDate">Data de Instalação</label>
+            <input type="date" id="installDate" name="installDate" required />
+
+
+            <!-- Recursos úteis -->
+            <fieldset>
+                <legend>Quais recursos você achou úteis? (Selecione os necessários)</legend>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="durability"> Durabilidade</label>
+                    <label><input type="checkbox" name="features" value="ease"> Facilidade de Uso</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                </div>
+            </fieldset>
+
+
+            <!-- Resenha escrita -->
+            <label for="writtenReview">Resenha Escrita (Opcional)</label>
+            <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+
+
+            <!-- Nome do usuário -->
+            <label for="username">Seu Nome (Opcional)</label>
+            <input type="text" id="username" name="username" />
+
+
+            <!-- Botão -->
+            <input type="submit" value="Enviar Avaliação" />
+        </form>
+    </main>
+
+
+    <footer>
+        <p>©2025 Emerson Ronald Pereira Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+
+    <script>
+        document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    </script>
+</body>
+</html>

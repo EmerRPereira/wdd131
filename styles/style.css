@@ -1,30 +1,29 @@
 :root {
-    --primary: #003A80;        /* Azul escuro header/footer */
-    --primary-light: #D7E8FF;  /* Azul claro do formulário */
+    --primary: #003A80;
+    --primary-light: #D7E8FF;
 }
 
-/* ======= BODY ======= */
+/* BODY */
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, sans-serif;
     background: #ffffff;
-    color: #000000;
+    color: #000;
 }
 
-/* ======= HEADER E FOOTER ======= */
+/* HEADER / FOOTER */
 header, footer {
     background-color: var(--primary);
     color: white;
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 footer p {
     margin: 4px 0;
 }
 
-/* ======= FORM ======= */
+/* FORM */
 form {
     background-color: var(--primary-light);
     padding: 20px;
@@ -33,18 +32,20 @@ form {
     max-width: 550px;
     margin: 30px auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    color: black;
 }
 
-/* ======= LABELS E TEXTOS ======= */
+/* LABELS */
 label, legend {
     display: block;
     margin: 12px 0 5px;
     font-weight: bold;
 }
 
-/* ======= INPUTS COMUNS ======= */
-select {
+/* INPUTS */
+select,
+input[type="text"],
+input[type="date"],
+textarea {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
@@ -53,73 +54,54 @@ select {
     font-size: 15px;
 }
 
-input[type="text"],
-textarea {
-    width: 96%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #777;
-    margin-bottom: 12px;
-    font-size: 15px;
-}
-
-input[type="date"] {
-    width: 40%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #777;
-    margin-bottom: 12px;
-    font-size: 15px;
-}
-
-/* ======= RADIO (ESTRELAS) ======= */
+/* RADIO STARS */
 .rating label {
-    display: block;
     font-size: 22px;
-    margin: 3px 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.rating input[type="radio"] {
-    margin-right: 8px;
+.rating input {
+    margin: 0;
 }
 
-/* ======= CHECKBOXES ======= */
+/* CHECKBOXES */
 .checkbox-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .checkbox-item {
     display: flex;
+    gap: 6px;
     align-items: center;
-    gap: 8px;
 }
 
-.checkbox-item input[type="checkbox"] {
+.checkbox-item input {
     width: 18px;
     height: 18px;
 }
 
-/* ======= BOTÃO ======= */
+/* SUBMIT BUTTON */
 .btn {
     width: 100%;
     padding: 12px;
-    border: none;
     background: var(--primary);
     color: white;
-    font-size: 18px;
+    border: none;
     border-radius: 6px;
+    font-size: 18px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .btn:hover {
     background: #002F66;
 }
 
-/* ======= RESPONSIVO ======= */
+/* RESPONSIVE */
 @media (max-width: 480px) {
     form {
         padding: 15px;

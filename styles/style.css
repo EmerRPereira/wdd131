@@ -79,3 +79,16 @@ select, input[type="text"], input[type="date"], textarea {
 .btn:hover {
     background: #002F66;
 }
+
+/* MEDIA QUERY*/
+@media (max-width: 600px) {
+    form {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

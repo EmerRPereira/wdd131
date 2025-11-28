@@ -1,80 +1,113 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário de Avaliação de Produto</title>
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form for WDD131 course.">
+    <meta name="author" content="Emerson Ronald Pereira">
+
     <link rel="stylesheet" href="styles/style.css" />
     <script src="scripts/script.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
 
-
     <main>
         <form method="get" action="review.html" id="reviewForm">
 
-            <!-- Nome do Produto -->
-            <label for="productName">Nome do Produto</label>
+            <!-- Product Name -->
+            <label for="productName">Product Name</label>
             <select id="productName" name="productName" required>
-                <option value="" disabled selected>Selecione um produto...</option>
+                <option value="" disabled selected>Select a Product...</option>
             </select>
 
-
-            <!-- Avaliação Geral -->
+            <!-- Overall Rating -->
             <fieldset class="rating">
-                <legend>Avaliação Geral</legend>
-                <label><input type="radio" name="rating" value="1" required />☆</label>
-                <label><input type="radio" name="rating" value="2" />☆☆</label>
-                <label><input type="radio" name="rating" value="3" />☆☆☆</label>
-                <label><input type="radio" name="rating" value="4" />☆☆☆☆</label>
-                <label><input type="radio" name="rating" value="5" />☆☆☆☆☆</label>
-            </fieldset>
+                <legend>Overall Rating</legend>
 
+                <div class="rating-options">
+                    <label for="rate1">
+                        <input type="radio" id="rate1" name="rating" value="1" required>
+                        ☆
+                    </label>
 
-            <!-- Data de instalação -->
-            <label for="installDate">Data de Instalação</label>
-            <input type="date" id="installDate" name="installDate" required />
+                    <label for="rate2">
+                        <input type="radio" id="rate2" name="rating" value="2">
+                        ☆☆
+                    </label>
 
+                    <label for="rate3">
+                        <input type="radio" id="rate3" name="rating" value="3">
+                        ☆☆☆
+                    </label>
 
-            <!-- Recursos úteis -->
-            <fieldset>
-                <legend>Quais recursos você achou úteis? (Selecione os necessários)</legend>
+                    <label for="rate4">
+                        <input type="radio" id="rate4" name="rating" value="4">
+                        ☆☆☆☆
+                    </label>
 
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="features" value="durability"> Durabilidade</label>
-                    <label><input type="checkbox" name="features" value="ease"> Facilidade de Uso</label>
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                    <label for="rate5">
+                        <input type="radio" id="rate5" name="rating" value="5">
+                        ☆☆☆☆☆
+                    </label>
                 </div>
             </fieldset>
 
+            <!-- Installation Date -->
+            <label for="installDate">Installation Date</label>
+            <input type="date" id="installDate" name="installDate" required>
 
-            <!-- Resenha escrita -->
-            <label for="writtenReview">Resenha Escrita (Opcional)</label>
+            <!-- Useful resources -->
+            <fieldset>
+                <legend>Which resources did you find useful? (Select all that apply)</legend>
+
+                <div class="checkbox-list">
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feat1" name="features" value="durability">
+                        <label for="feat1">Durability</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feat2" name="features" value="ease">
+                        <label for="feat2">Ease of Use</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feat3" name="features" value="performance">
+                        <label for="feat3">Performance</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feat4" name="features" value="design">
+                        <label for="feat4">Design</label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="writtenReview">Written Review (Optional)</label>
             <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
 
+            <!-- User Name -->
+            <label for="username">Your Name (Optional)</label>
+            <input type="text" id="username" name="username">
 
-            <!-- Nome do usuário -->
-            <label for="username">Seu Nome (Opcional)</label>
-            <input type="text" id="username" name="username" />
-
-
-            <!-- Botão -->
-            <input type="submit" value="Enviar Avaliação" />
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Review" class="btn">
         </form>
     </main>
 
-
     <footer>
-        <p>©2025 Emerson Ronald Pereira Brasil</p>
+        <p>©2025 Emerson Ronald Pereira - Brazil</p>
         <p id="lastModified"></p>
     </footer>
-
-
-    <script>
-        document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
-    </script>
 </body>
+
 </html>

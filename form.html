@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- O validador exige que o título contenha "Product Review" -->
     <title>WDD131 - Product Review Form</title>
 
-    <!-- O validador exige que a descrição contenha também o termo "Product Review Form" -->
     <meta name="description" content="Product Review Form for the WDD131 course. Users can evaluate products, rate features, record installation dates, and submit detailed feedback.">
-
     <meta name="author" content="Emerson Ronald Pereira">
 
     <link rel="stylesheet" href="styles/style.css">
@@ -17,99 +13,98 @@
 </head>
 
 <body>
-    <header>
-        <h1>Product Review</h1>
-    </header>
 
-    <main>
-        <form method="get" action="review.html" id="reviewForm">
+<header>
+    <h1>Product Review</h1>
+</header>
 
-            <!-- Product Name -->
-            <label for="productName">Product Name</label>
-            <select id="productName" name="productName" required>
-                <option value="" disabled selected>Select a Product...</option>
-            </select>
+<main>
 
-            <!-- Overall Rating -->
-            <fieldset class="rating">
-                <legend>Overall Rating</legend>
+<form method="get" action="review.html" id="reviewForm">
 
-                <!-- Cada rádio agora contém: id, name, value e required somente no primeiro -->
-                <label>
-                    <input type="radio" id="rate1" name="rating" value="1" required>
-                    ☆
-                </label>
+    <!-- Product Name -->
+    <label for="productName">Product Name</label>
+    <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product...</option>
+    </select>
 
-                <label>
-                    <input type="radio" id="rate2" name="rating" value="2">
-                    ☆☆
-                </label>
+    <!-- Overall Rating -->
+    <fieldset class="rating">
+        <legend>Overall Rating</legend>
 
-                <label>
-                    <input type="radio" id="rate3" name="rating" value="3">
-                    ☆☆☆
-                </label>
+        <label for="rate1">1 Star
+            <input type="radio" id="rate1" name="rating" value="1" required>
+        </label>
 
-                <label>
-                    <input type="radio" id="rate4" name="rating" value="4">
-                    ☆☆☆☆
-                </label>
+        <label for="rate2">2 Stars
+            <input type="radio" id="rate2" name="rating" value="2" required>
+        </label>
 
-                <label>
-                    <input type="radio" id="rate5" name="rating" value="5">
-                    ☆☆☆☆☆
-                </label>
-            </fieldset>
+        <label for="rate3">3 Stars
+            <input type="radio" id="rate3" name="rating" value="3" required>
+        </label>
 
-            <!-- Installation Date -->
-            <label for="installDate">Installation Date</label>
-            <input type="date" id="installDate" name="installDate" required>
+        <label for="rate4">4 Stars
+            <input type="radio" id="rate4" name="rating" value="4" required>
+        </label>
 
-            <!-- Useful resources -->
-            <fieldset>
-                <legend>Which resources did you find useful? (Select all that apply)</legend>
+        <label for="rate5">5 Stars
+            <input type="radio" id="rate5" name="rating" value="5" required>
+        </label>
+    </fieldset>
 
-                <div class="checkbox-list">
+    <!-- Installation Date -->
+    <label for="installDate">Installation Date</label>
+    <input type="date" id="installDate" name="installDate" required>
 
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feat1" name="features" value="durability">
-                        <label for="feat1">Durability</label>
-                    </div>
+    <!-- Useful Resources -->
+    <fieldset>
+        <legend>Which resources did you find useful? (Select all that apply)</legend>
 
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feat2" name="features" value="ease">
-                        <label for="feat2">Ease of Use</label>
-                    </div>
+        <div class="checkbox-list">
 
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feat3" name="features" value="performance">
-                        <label for="feat3">Performance</label>
-                    </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="feat1" name="features" value="durability">
+                <label for="feat1">Durability</label>
+            </div>
 
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feat4" name="features" value="design">
-                        <label for="feat4">Design</label>
-                    </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="feat2" name="features" value="ease">
+                <label for="feat2">Ease of Use</label>
+            </div>
 
-                </div>
-            </fieldset>
+            <div class="checkbox-item">
+                <input type="checkbox" id="feat3" name="features" value="performance">
+                <label for="feat3">Performance</label>
+            </div>
 
-            <!-- Written Review -->
-            <label for="writtenReview">Written Review (Optional)</label>
-            <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+            <div class="checkbox-item">
+                <input type="checkbox" id="feat4" name="features" value="design">
+                <label for="feat4">Design</label>
+            </div>
 
-            <!-- User Name -->
-            <label for="username">Your Name (Optional)</label>
-            <input type="text" id="username" name="username">
+        </div>
+    </fieldset>
 
-            <!-- Submit Button -->
-            <input type="submit" value="Submit Review" class="btn">
-        </form>
-    </main>
+    <!-- Written Review -->
+    <label for="writtenReview">Written Review (Optional)</label>
+    <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
 
-    <footer>
-        <p>©2025 Emerson Ronald Pereira - Brazil</p>
-        <p id="lastModified"></p>
-    </footer>
+    <!-- User Name -->
+    <label for="username">Your Name (Optional)</label>
+    <input type="text" id="username" name="username">
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit Review" class="btn">
+
+</form>
+
+</main>
+
+<footer>
+    <p>©2025 Emerson Ronald Pereira - Brazil</p>
+    <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>

@@ -17,6 +17,12 @@ const option = document.createElement("option");
 option.value = prod.id;
 option.textContent = prod.name;
 productSelect.appendChild(option);
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("lastModified").textContent =
+        `Last Modification: ${document.lastModified}`;
 });
 
 

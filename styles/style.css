@@ -43,6 +43,14 @@ select, input[type="text"], input[type="date"], textarea {
     font-size: 15px;
 }
 
+input[type="text"], textarea {
+    width: 96%;
+}
+
+input[type="date"] {
+    width: 50%;
+}
+
 /* RADIO */
 .rating label {
     display: flex;

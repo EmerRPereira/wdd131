@@ -249,23 +249,37 @@ function renderProducts() {
       <p class="desc">${p.desc[lang]}</p>
       <div class="price">${currencyLabel(p.price)}</div>
       <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
-        <button class="btn" data-add="${p.id}">${getLabel('btn_add')}</button>
-        <button class="btn ghost" data-add-quick="${p.id}">${getLabel('btn_add')}</button>
+        <button class="btn" data-add="${p.id}" aria-label="${p.name[lang]} - ${getLabel('btn_add')}">
+          ${getLabel('btn_add')}
+        </button>
       </div>
     `;
     productGrid.appendChild(card);
   });
 
-  // Delegation: adicionar através dos botões do card
+  // Delegação: adiciona ao carrinho ao clicar no único botão
   productGrid.onclick = (e) => {
-    const id = e.target.getAttribute('data-add') || e.target.getAttribute('data-add-quick');
-    if (!id) return;
+    const btn = e.target.closest('button[data-add]');
+    if (!btn) return;
+
+    const id = btn.getAttribute('data-add');
     const prod = products.find(x => x.id === id);
-    const item = { id: prod.id, name: prod.name[lang], price: prod.price, qty: 1, toppings: [], total: prod.price };
+    if (!prod) return;
+
+    const item = {
+      id: prod.id,
+      name: prod.name[lang],
+      price: prod.price,
+      qty: 1,
+      toppings: [],
+      total: prod.price
+    };
+
     addToCart(item);
     alert(i18n[lang].msg_add_success);
   };
 }
+
 
 /* Render select de produtos */
 function renderProductSelect() {

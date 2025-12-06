@@ -109,9 +109,45 @@ main{
 .card .price{margin-top:auto;font-weight:700;padding-top:0.6rem}
 
 /* Buttons */
-.btn{display:inline-block;padding:0.5rem 0.8rem;border-radius:8px;border:0;cursor:pointer;background:transparent}
-.btn.primary{background:var(--pink);color:white}
-.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.08)}
+/* BOTÕES — corrigido para modo claro e escuro */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* Botão principal */
+.btn.primary {
+  background: var(--pink);
+  color: #fff;
+}
+
+body.tema-dark .btn.primary {
+  background: var(--pink);
+  color: #fff; /* mantém contraste */
+}
+
+/* Botão ghost (contorno) */
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: var(--text);
+}
+
+body.tema-dark .btn.ghost {
+  border-color: rgba(255,255,255,0.4);
+  color: var(--text);
+}
+
+/* Hover */
+.btn:hover {
+  filter: brightness(1.1);
+}
+
 .btn.small{padding:0.3rem 0.5rem;font-size:0.9rem}
 
 /* Order layout */
@@ -145,6 +181,18 @@ body.tema-dark .site-footer{
   border-top-color: rgba(255,255,255,0.03);
 }
 .footer-inner{width:100%;display:flex;justify-content:center}
+
+/* Botão dentro dos cards */
+.card .btn {
+  background: var(--blue);
+  color: #fff;
+}
+
+body.tema-dark .card .btn {
+  background: var(--blue);
+  color: #fff;
+}
+
 
 /* Small screens */
 @media (max-width:300px){
@@ -181,4 +229,23 @@ body.tema-dark .site-footer{
 .topping-item input[type="checkbox"] {
   width: 18px;
   height: 18px;
+}
+
+.topping-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 6px;
+}
+
+.topping-item input {
+  transform: scale(1.2);
+}
+
+body.tema-dark .btn {
+  color: var(--text);
+}
+
+body.tema-dark .btn.primary {
+  color: #fff;
 }

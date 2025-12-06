@@ -1,4 +1,7 @@
-/* script.js - DachsIce
+/* 
+WDD131: W06 Project
+Author: Emerson Ronald Pereira
+script.js - DachsIce
    - produtos (10 items)
    - renderização, carrinho, total
    - idioma PT/EN
@@ -46,7 +49,7 @@ const i18n = {
   pt: {
     nav_home: 'Início', nav_products: 'Produtos', nav_order: 'Pedido', nav_contact: 'Contato',
     hero_welcome: 'Bem-vindo à <span class="accent">DachsIce</span>',
-    hero_sub: 'Sorvetes artesanais, milkshakes e açaí — feitos com carinho.',
+    hero_sub: 'Sorvetes deliciosos, milkshakes e açaí - Feitos com carinho!',
     btn_view: 'Ver Produtos', products_title: 'Produtos', products_lead: 'Escolha entre sabores clássicos e combinações especiais.',
     order_title: 'Monte seu Pedido', label_product: 'Produto', label_quantity: 'Quantidade', label_toppings: 'Complementos (opcional)',
     btn_add: 'Adicionar ao carrinho', register_title: 'Cadastro de Cliente', label_name: 'Nome', label_email: 'E-mail', label_phone: 'Telefone',
@@ -59,7 +62,7 @@ const i18n = {
   en: {
     nav_home: 'Home', nav_products: 'Products', nav_order: 'Order', nav_contact: 'Contact',
     hero_welcome: 'Welcome to <span class="accent">DachsIce</span>',
-    hero_sub: 'Artisanal ice cream, milkshakes and açaí — made with care.',
+    hero_sub: 'Delicious ice cream, milkshakes and açaí - Made with care!',
     btn_view: 'View Products', products_title: 'Products', products_lead: 'Choose from classic flavors and special combos.',
     order_title: 'Build your Order', label_product: 'Product', label_quantity: 'Quantity', label_toppings: 'Toppings (optional)',
     btn_add: 'Add to cart', register_title: 'Customer Registration', label_name: 'Name', label_email: 'Email', label_phone: 'Phone',

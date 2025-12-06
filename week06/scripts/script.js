@@ -319,7 +319,11 @@ function renderCart() {
     <div class="cart-row" data-idx="${idx}">
       <div>
         <strong>${it.name}</strong> <small> x ${it.qty}</small><br>
-        <small style="color:var(--muted)">${it.toppings.length ? it.toppings.join(', ') : ''}</small>
+        <small style="color:var(--muted)">  ${it.toppings.length ? it.toppings
+      .map(tid => toppingsList.find(t => t.id === tid)?.name[lang] || tid)
+      .join(', ')
+    : ''}
+</small>
       </div>
       <div style="text-align:right">
         <div>${currencyLabel(it.total)}</div>

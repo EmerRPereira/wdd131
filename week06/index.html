@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DachsIce - Sorveteria artesanal. Peça online, veja o cardápio e acompanhe seus pedidos." />
+  <title>DachsIce • Sorveteria</title>
+
+  <!-- vincular o CSS -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- script (defer para garantir DOM pronto) -->
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <!-- HEADER FIXO -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="DachsIce logo">Dachs<span>Ice</span></a>
+
+      <div class="header-controls" aria-hidden="false">
+        <label class="sr-only" for="langSelect">Idioma</label>
+        <select id="langSelect" aria-label="Idioma">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+
+        <button id="themeToggle" class="btn small" aria-pressed="false" title="Tema">🌞</button>
+
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
+
+      <nav id="mainNav" class="main-nav" role="navigation" aria-hidden="true">
+        <ul>
+          <li><a href="#home" data-i18n="nav_home">Início</a></li>
+          <li><a href="#products" data-i18n="nav_products">Produtos</a></li>
+          <li><a href="#order" data-i18n="nav_order">Pedido</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN rolável (isso faz header/footer fixos) -->
+  <main id="main" tabindex="-1">
+    <section id="home" class="hero container">
+      <div class="hero-content">
+        <h1 data-i18n="hero_welcome">Bem-vindo à <span class="accent"></span>DachsIce</span></h1>
+        <p data-i18n="hero_sub">Sorvetes artesanais, milkshakes e açaí — feitos com carinho.</p>
+        <a href="#products" class="btn primary" data-i18n="btn_view">Ver Produtos</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/conj-sorvetes.svg" alt="Sorvetes artesanais, milkshakes e açaí — feitos com carinho." loading="lazy" class="profile-pic">
+      </div>
+    </section>
+
+    <section id="products" class="container products">
+      <div class="section-header">
+        <h2 data-i18n="products_title">Produtos</h2>
+        <p class="lead" data-i18n="products_lead">Escolha entre sabores clássicos e combinações especiais.</p>
+      </div>
+
+      <div id="productGrid" class="product-grid" aria-live="polite">
+        <!-- Produtos renderizados por JavaScript -->
+      </div>
+    </section>
+
+    <section id="order" class="container order-section">
+      <div class="left-col">
+        <h2 data-i18n="order_title">Monte seu Pedido</h2>
+
+        <form id="orderForm" class="order-form" autocomplete="off">
+          <label for="productSelect" data-i18n="label_product">Produto</label>
+          <select id="productSelect" required></select>
+
+          <label for="quantity" data-i18n="label_quantity">Quantidade</label>
+          <input type="number" id="quantity" min="1" value="1" required>
+
+          <label for="toppings" data-i18n="label_toppings">Complementos (opcional)</label>
+          <div id="toppings" class="toppings"></div>
+
+          <button type="submit" class="btn" data-i18n="btn_add">Adicionar ao carrinho</button>
+        </form>
+
+        <section class="register container-small">
+          <h3 data-i18n="register_title">Cadastro de Cliente</h3>
+          <form id="registerForm" class="register-form">
+            <label for="name" data-i18n="label_name">Nome</label>
+            <input id="name" name="name" required>
+
+            <label for="email" data-i18n="label_email">E-mail</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="phone" data-i18n="label_phone">Telefone</label>
+            <input id="phone" name="phone" inputmode="tel" required>
+
+            <button type="submit" class="btn primary" data-i18n="btn_save">Salvar</button>
+          </form>
+          <div id="savedUser" class="saved-user" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <aside class="cart" aria-labelledby="cartTitle">
+        <h3 id="cartTitle" data-i18n="cart_title">Carrinho</h3>
+        <div id="cartItems" class="cart-items">Nenhum item no carrinho.</div>
+
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span data-i18n="cart_total">Total</span>:
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+          <div class="cart-actions">
+            <button id="checkoutBtn" class="btn primary" data-i18n="btn_checkout">Finalizar Pedido</button>
+            <button id="clearCartBtn" class="btn ghost" data-i18n="btn_clear">Limpar</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2 data-i18n="contact_title">Contato & Local</h2>
+      <p data-i18n="contact_address">Endereço: Rua Deuputado Waldemiro Pedroso, 1668 — Novo Mundo — Curitiba, PR</p>
+      <p data-i18n="contact_hours">Horário: Monday–Saturday • 12:00–20:00</p>
+      <p>Redes: <a href="https://www.instagram.com/dachsicesorveteria/" target="_blank" rel="noopener">@dachsice</a></p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1764713496122!6m8!1m7!1sSJFcoqyTMjP_MmGuQUfFww!2m2!1d-25.49262498968033!2d-49.3095425297298!3f355.81!4f0!5f0.7820865974627469"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="mapa do quiosque"></iframe>
+    </section>
+  </main>
+
+  <!-- FOOTER FIXO -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> DachsIce • Feito por Emerson</p>
+    </div>
+  </footer>
+</body>
+</html>

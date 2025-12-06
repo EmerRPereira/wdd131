@@ -55,7 +55,7 @@ const i18n = {
     btn_add: 'Adicionar ao carrinho', register_title: 'Cadastro de Cliente', label_name: 'Nome', label_email: 'E-mail', label_phone: 'Telefone',
     btn_save: 'Salvar', cart_title: 'Carrinho', cart_total: 'Total', btn_checkout: 'Finalizar Pedido', btn_clear: 'Limpar',
     contact_title: 'Contato & Local', contact_address: 'Endereço: Rua Deuputado Waldemiro Pedroso, 1668 — Novo Mundo — Curitiba, PR',
-    contact_hours: 'Horário: Monday–Saturday • 12:00–20:00',
+    contact_hours: 'Horário: Segunda-Feira – Sábado • 12:00–20:00',
     msg_cart_empty: 'Nenhum item no carrinho.', msg_add_success: 'Item adicionado ao carrinho.', msg_fill_user: 'Cadastre-se antes de finalizar.',
     msg_order_done: 'Pedido finalizado! ID: ', msg_confirm_clear: 'Limpar o carrinho?', msg_invalid: 'Por favor preencha os dados corretamente.'
   },
@@ -68,7 +68,7 @@ const i18n = {
     btn_add: 'Add to cart', register_title: 'Customer Registration', label_name: 'Name', label_email: 'Email', label_phone: 'Phone',
     btn_save: 'Save', cart_title: 'Cart', cart_total: 'Total', btn_checkout: 'Checkout', btn_clear: 'Clear',
     contact_title: 'Contact & Location', contact_address: 'Address: Rua Deuputado Waldemiro Pedroso, 1668 — Novo Mundo — Curitiba, PR',
-    contact_hours: 'Hours: Monday–Saturday • 12:00–20:00',
+    contact_hours: 'Hours: Monday – Saturday • 12:00–20:00',
     msg_cart_empty: 'No items in cart.', msg_add_success: 'Item added to cart.', msg_fill_user: 'Please register before checkout.',
     msg_order_done: 'Order completed! ID: ', msg_confirm_clear: 'Clear the cart?', msg_invalid: 'Please fill out fields correctly.'
   }

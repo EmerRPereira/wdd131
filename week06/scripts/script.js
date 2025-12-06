@@ -89,7 +89,7 @@ const langSelect = $('langSelect');
 const themeToggle = $('themeToggle');
 const menuToggle = $('menuToggle');
 const mainNav = $('mainNav');
-const yearEl = $('year');
+const yearEl = $('copyright-year');
 
 /* Inicializações */
 yearEl.textContent = new Date().getFullYear();
@@ -414,3 +414,35 @@ catch(err){ console.warn('localStorage não disponível. Dados não serão salvo
   renderCart();
   renderUser();
 })();
+
+/* === Footer: Last Modification === */
+document.addEventListener("DOMContentLoaded", () => {
+    // Ano automático
+    const yearSpan = document.getElementById("copyright-year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Última modificação real do arquivo
+    const lastModSpan = document.getElementById("last-modified");
+    if (lastModSpan) {
+        const lastMod = new Date(document.lastModified);
+
+        // Formatação bonita para PT-BR
+        const formatado = lastMod.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+        lastModSpan.textContent = formatado;
+    }
+});
+
+// LAST MODIFICATION DO RODAPÉ
+const lastModEl = document.getElementById("last-modified");
+if (lastModEl) {
+  lastModEl.textContent = document.lastModified;
+}
